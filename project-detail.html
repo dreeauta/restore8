@@ -1,0 +1,257 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Andreea Uta Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/slidebox.css" type="text/css">
+
+  <link rel="shortcut icon" href="img/icon/initials.ico" type="image/x-icon" />
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+  <style>
+
+  body {
+    background-image: url(img/swaccess-hero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+    .slider-for .slick-slide {
+    }
+
+    .slider-for-container {
+      margin-bottom: 25px;
+    }
+
+    .slider-for img {
+      height: 350px;
+      width: 700px;
+    }
+
+    .slider-nav .slick-slide {
+      width: 150px !important;
+    }
+
+    .slider-nav {
+      height: 90px;
+      margin: auto;
+    }
+
+    .slider-nav img {
+      padding: 0 10px;
+      width: 100%;
+    }
+
+    .slider-nav .slick-track {
+      width: 80% !important;
+      margin: auto;
+    }
+
+    .container {
+      margin: 0 20px;
+      width: 50%;
+    }
+
+    .slick-track {
+  margin: 0 auto;
+}
+
+.slick-prev {
+  background-image: url(img/arrow-left.jpeg);
+}
+
+.slick-next {
+  background-image: url(img/arrow-right.jpeg);
+}
+
+.project-overlay {
+  background-color: rgba(0,0,0,.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  margin: auto;
+  padding: 50px 100px;
+}
+
+.project-links {
+  margin-top: 40px;
+}
+
+.project-container:hover {
+  background: transparent;
+}
+
+.detail-container {
+  height: auto;
+  margin: 0 20px;
+  color: white;
+  display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  font-size: 20px;
+  width: 30%;
+  text-align: center;
+}
+
+.detail-container h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.detail-container p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.project-overlay:hover {
+    background: rgba(0,0,0,0.85);
+  }
+
+  .detail-container .project-links a {
+    background: transparent;
+    border: 2px solid white;
+    color: black;
+    transition: all .3s;
+    color: white;
+    padding: 10px 25px;
+  }
+
+  .detail-container .project-links a:hover {
+    background: white;
+    color: black;
+    transition: all .3s;
+  }
+
+  .exit {
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+
+  }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="project-overlay">
+
+      <div class="exit">
+        X
+      </div>
+
+    <div class="container">
+      <div class="slider-for-container">
+        <div class="slider-for">
+          <div><img src="img/vacation.png"></div>
+          <div><img src="img/momentus.png"></div>
+          <div><img src="img/vacation.png"></div>
+        </div>
+      </div>
+        <div class="slider-nav">
+          <div><img src="img/vacation.png"></div>
+          <div><img src="img/momentus.png"></div>
+          <div><img src="img/vacation.png"></div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- <div class="project-carousel-container">
+      <div class="project-carousel">
+        <div><img src="img/vacation.png"></div>
+        <div><img src="img/vacation.png"></div>
+        <div><img src="img/vacation.png"></div>
+      </div>
+    </div> -->
+
+    <div class="project-container detail-container">
+      <h2>Vacation.com </h2>
+
+      <p>Worked with a designer and Sitecore developer to rebuild Vacation.com to help target a new
+        audience and grow conversions.</p>
+      <p class="project-technologies"> <span>Technologies: </span> HTML, SCSS, Javascript </p>
+      <div class="project-links">
+        <a class="btn"  href="https://www.vacation.com/" target="_blank"> Website </a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.3.1/lazyload.min.js"></script>
+    <!-- <script type="text/javascript" src="js/script.js"> </script> -->
+    <script type="text/javascript" src="js/slick/slick.min.js"></script>
+    <script src="js/slidebox-min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+    $(document).ready(function(){
+
+      $('.project-carousel').slick({
+        centerMode: true,
+        dots: true,
+       infinite: true,
+       speed: 300,
+       slidesToShow: 1,
+       adaptiveHeight: true
+      });
+
+
+      $('.slider-for').slick({
+         slidesToShow: 1,
+         slidesToScroll: 1,
+         arrows: false,
+         centerMode: true,
+         fade: true,
+         asNavFor: '.slider-nav'
+        });
+
+        $('.slider-nav').slick({
+         slidesToShow: 3,
+         slidesToScroll: 1,
+         centerMode: true,
+         asNavFor: '.slider-for',
+         centerMode: true,
+         focusOnSelect: true,
+         prevArrow: $('.prev'),
+         nextArrow: $('.next'),
+        });
+    });
+
+    $('.exit').on("click", function(){
+      $('.project-overlay').hide();
+    });
+
+
+  </script>
+</body>
+
+</html> -->

@@ -1,0 +1,145 @@
+// =============================================================================
+// Design tokens – single source of truth for colors, spacing, radius, shadows.
+// Use these variables in components; do not hardcode values.
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// Colors – base palette
+// -----------------------------------------------------------------------------
+$white: #ffffff;
+$white-pure: #ffffff;
+$white-light: rgba(255, 255, 255, 0.6);
+$white-muted: rgba(255, 255, 255, 0.7);
+$white-subtle: rgba(255, 255, 255, 0.08);
+$white-subtle-soft: rgba(255, 255, 255, 0.06);
+$white-overlay: rgba(255, 255, 255, 0.97);
+$white-border: rgba(255, 255, 255, 0.4);
+$white-border-strong: rgba(255, 255, 255, 0.55);
+$white-border-arrow: rgba(255, 255, 255, 0.5);
+$white-highlight: rgba(255, 255, 255, 0.95);
+$white-strong: rgba(255, 255, 255, 0.88);
+
+$black: #000000;
+$black-soft: #1a1a1a;
+$black-overlay: rgba(0, 0, 0, 0.9);
+$black-overlay-light: rgba(0, 0, 0, 0.75);
+$black-overlay-subtle: rgba(0, 0, 0, 0.3);
+$black-overlay-strong: rgba(0, 0, 0, 0.35);
+$black-overlay-hover: rgba(0, 0, 0, 0.06);
+$black-overlay-fade: rgba(0, 0, 0, 0.04);
+$black-overlay-shadow: rgba(0, 0, 0, 0.08);
+$black-overlay-shadow-strong: rgba(0, 0, 0, 0.15);
+$black-overlay-shadow-soft: rgba(0, 0, 0, 0.1);
+$black-shadow: rgba(0, 0, 0, 0.2);
+$black-shadow-card: rgba(0, 0, 0, 0.06);
+$black-shadow-card-hover: rgba(0, 0, 0, 0.1);
+
+$tan-light: #f5f4f0;
+$off-white: #f0f4f5;
+$gray-bg: #f5f5f5;
+$gray-bg-alt: #f0f2f5;
+$gray-bg-input: #fafafa;
+$gray-bg-section: #f5f5f5;
+
+$light-green: #8decb4;
+$green: #41b06e;
+$darkgreen: #1b2415;
+
+$darkblue: #0a082b;
+$blue: #0a6ebd;
+$navy: #0f3a6c;
+
+$darkpurple: #323052;
+$purple: #654e92;
+$lightpurple: #7081c4;
+
+$darkgray: #262729;
+$slate-900: #0f172a;
+$slate-800: #1e293b;
+$slate-600: #475569;
+$slate-500: #64748b;
+$slate-400: #94a3b8;
+$text-light: #ccd6f6;
+$white-about: rgba(255, 255, 255, 0.8);
+$slate-shadow: rgba(15, 23, 42, 0.06);
+$slate-shadow-hover: rgba(15, 23, 42, 0.1);
+$slate-border: rgba(15, 23, 42, 0.08);
+
+$gray-700: #333333;
+$gray-600: #444444;
+$gray-500: #666666;
+$gray-400: #888888;
+$gray-300: #999999;
+$gray-border: #e0e0e0;
+$gray-border-alt: #e8e8e8;
+$gray-border-soft: #dddddd;
+$gray-border-muted: #cccccc;
+
+$teal-accent: #64ffda;
+$teal-accent-hover: #8affdf;
+$teal-accent-spot: rgba(100, 255, 218, 0.2);
+$teal-accent-spot-soft: rgba(100, 255, 218, 0.1);
+$teal-ui: #5dd4d0;
+$teal-ui-hover: #7ee0dc;
+$teal-ui-glass: rgba(93, 212, 208, 0.8);
+$teal-ui-glass-hover: rgba(93, 212, 208, 0.6);
+$teal-ui-glow: rgba(93, 212, 208, 0.12);
+$teal-ui-glow-strong: rgba(93, 212, 208, 0.6);
+$teal-carousel-bullet: rgba(205, 205, 205, 0.55);
+
+$nav-text: #2d2a32;
+
+// -----------------------------------------------------------------------------
+// European Remodeling – design tokens
+// -----------------------------------------------------------------------------
+$er-dark-warm: #302424;
+$er-dark-cool: #243030;
+$er-slate: #2F4F4F;
+$er-rose: #8C5C5C;
+$er-rose-light: #C48A8A;
+
+$er-accent: $er-dark-cool;
+$er-accent-hover: $er-slate;
+$er-beige: #f8f4f3;
+$er-beige-dark: rgba($er-rose-light, 0.25);
+$er-text: $er-dark-warm;
+$er-text-muted: $er-rose;
+$er-white: #ffffff;
+$er-border: rgba($er-rose, 0.35);
+
+// -----------------------------------------------------------------------------
+// Spacing
+// -----------------------------------------------------------------------------
+$margin-lg: 80px;
+$margin-sm: 40px;
+$space-xs: 0.25rem;
+$space-sm: 0.5rem;
+$space-md: 1rem;
+$space-lg: 1.5rem;
+$space-xl: 2rem;
+$space-2xl: 2.5rem;
+$space-3xl: 3rem;
+$space-4xl: 4rem;
+
+// -----------------------------------------------------------------------------
+// Border radius
+// -----------------------------------------------------------------------------
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 12px;
+$radius-xl: 16px;
+$radius-2xl: 20px;
+
+// -----------------------------------------------------------------------------
+// Shadows (design tokens for consistency)
+// -----------------------------------------------------------------------------
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 20px rgba(0, 0, 0, 0.06);
+$shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.08);
+$shadow-xl: 0 12px 40px rgba(0, 0, 0, 0.15);
+$shadow-card: 0 4px 20px rgba(0, 0, 0, 0.06);
+$shadow-card-hover: 0 12px 32px rgba(0, 0, 0, 0.1);
+$shadow-nav: 0 1px 0 rgba(0, 0, 0, 0.06);
+$shadow-section: 0 12px 40px rgba(0, 0, 0, 0.08);
+$shadow-video: 0 20px 50px rgba(0, 0, 0, 0.35);
+$shadow-focus: 0 0 14px rgba(93, 212, 208, 0.6);

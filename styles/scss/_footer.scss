@@ -1,0 +1,28 @@
+.footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 40px 0;
+
+    .icons {
+        display: flex;
+    }
+
+    .icons a {
+        text-decoration: none;
+        color: black;
+        padding: 0px 10px 50px 10px;
+        filter: invert(30%);
+        transition: 0s filter;
+      }
+      
+      .icons a:hover {
+        transition-delay:.4s;
+        filter: invert(0%);
+      }
+  }
+
+  
+  

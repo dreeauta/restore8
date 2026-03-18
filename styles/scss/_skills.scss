@@ -1,0 +1,129 @@
+.skills-wrapper {
+    // margin: 100px 100px 50px;
+    margin-top: $margin-lg;
+    
+
+    h1 {
+        text-align: center;
+    }
+
+    .skills-container {
+        background-color: $off-white;
+        background-image: url('../img/abstract2.jpg');
+        background-position: 0 95%;
+        background-size: cover;
+        background-attachment: fixed;
+        // border-radius: 40% 0;
+        padding: 50px;
+        margin-top: 50px;
+    }
+
+    .skills-summary {
+        margin: 50px auto 100px;
+        width: 70%;
+
+        ul {
+            line-height: 1.8;
+            list-style-type: disc;
+        }
+        li {
+            list-style-type: disc;
+            margin-bottom: 15px;
+        }
+    }
+
+    .skills-summary-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 3rem;
+        margin: 30px auto;
+      }
+
+      .skill-category {
+        background-color: $white-light;      
+        border-radius: 5px;
+        // border-bottom: 5px solid $darkblue;
+        // box-shadow:
+        // 0 4px 8px rgba(30, 85, 160, 0.15),   
+        // 0 12px 24px rgba(30, 85, 160, 0.25); 
+        padding: 30px 50px;
+      }
+      
+      .skill-category h3 {
+        margin-bottom: 0.5rem;
+      }
+
+      .skill-category ul {
+        margin-left: 15px;
+        list-style: disc;
+      }
+      
+      .skill-category li {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 0.6rem;
+      }
+      
+}
+
+.skills-logo-container {
+    margin: 50px 0 $margin-lg;
+
+
+    li {
+        display: inline-block;
+    }
+
+    .skills {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: auto;
+        
+        @include max-tablet {
+          flex-wrap: wrap;
+          gap: 20px;
+          width: 90%;
+        }
+      }
+      
+      
+      .skills img {
+        height: 100px;
+        -webkit-filter: grayscale(80%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(30%);
+      }
+      
+      // .skills img:hover {
+      //   -webkit-filter: grayscale(30%); /* Safari 6.0 - 9.0 */
+      //   filter: grayscale(30%);
+      // }
+      
+      .skills li {
+        font-family: 'Open Sans', sans-serif;
+        vertical-align: top;
+        margin-bottom: 20px;
+        padding-top: 10px;
+        text-align: center;
+
+        @include max-tablet {
+          max-width: 25%;
+        }
+      }
+
+      .skills li img {
+        animation: slide-up 2s;
+      }
+      
+      .skills li div {
+        /* transition: 2s all; */
+        padding-top: 10px;
+      }
+}
+
+
+@keyframes slide-up {
+    from { opacity: 0; line-height: 500px;}
+    to {opacity: 1;line-height: 25px;}
+  }
+  

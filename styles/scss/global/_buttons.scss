@@ -1,0 +1,15 @@
+.btn {
+    border: 1px solid $darkblue;
+    border-radius: 4px;
+    text-decoration: none;
+    color: $darkblue;
+    display: inline-block;
+    transition: all .3s;
+    padding: 15px 30px;
+
+    &:hover {
+        background: $darkblue;
+        color: $off-white;
+        transition: .35s all;
+      }
+}
