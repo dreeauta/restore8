@@ -1,0 +1,207 @@
+#menuToggle {
+    position: fixed;
+    z-index: 1;
+    top: 30px;
+    left: 50px;
+
+    display: inline-block;
+
+    -webkit-user-select: none;
+            user-select: none;
+}
+
+#menuToggle input {
+    position: absolute;
+    z-index: 2; /* and place it over the hamburger */
+    top: -7px;
+    left: -5px;
+
+    display: block;
+
+    width: 40px;
+    height: 32px;
+
+    cursor: pointer;
+
+    opacity: 0; /* hide this */
+
+    -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+    position: relative;
+    z-index: 1;
+
+    display: block;
+
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+
+    transition: transform .5s cubic-bezier(.77,.2,.05,1.0),
+    background .5s cubic-bezier(.77,.2,.05,1.0),
+    opacity .55s ease;
+    transform-origin: 4px 0;
+
+    border-radius: 3px;
+    background: black;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0 0;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0 100%;
+}
+
+/*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span {
+    transform: rotate(45deg) translate(-2px, -1px);
+
+    opacity: 1;
+    background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+    transform: rotate(0deg) scale(.2, .2);
+
+    opacity: 0;
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+
+    opacity: 1;
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+    position: absolute;
+    width: 220px;
+    height: 110vh;
+    /* width: 150px;
+    height: 82vh; */
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+
+    list-style-type: none;
+
+    transition: transform .5s cubic-bezier(.77,.2,.05,1.0);
+    transform: translate(-100%, 0);
+    /* to stop flickering of text in safari */
+    transform-origin: 0 0;
+
+    background: white;
+}
+
+
+#menu li {
+    font-size: 22px;
+
+    padding: 20px 0;
+}
+
+/*
+ * And let's fade it in from the left
+ */
+#menuToggle input:checked ~ ul {
+    transform: scale(1.0, 1.0);
+    opacity: .95;
+}
+
+#menu a {
+    /*margin-right: 35px;*/
+    font-family: 'Poppins', sans-serif;
+
+    transition: 0s border, 0s font-size;
+    text-decoration: none;
+
+    color: black;
+}
+
+#menu a:hover {
+    padding-bottom: 5px;
+
+    transition-delay: .3s;
+
+    border-bottom: 2px solid black;
+}
+
+
+.menu-icons {
+    text-align: center;
+}
+
+.menu-icons a {
+    padding: 0 5px;
+
+    transition: 0s filter;
+    text-decoration: none;
+
+    color: black;
+
+    filter: invert(20%);
+}
+
+.menu-icons a:hover {
+    transition-delay: .2s;
+
+    border: none !important;
+
+    filter: invert(0%);
+}
+
+
+
+@media only screen and (max-width: 900px) {
+    #menu {
+        /*text-align: center;*/
+        padding: 100px 0;
+        width: 100vw;
+    }
+
+    #menuToggle {
+        background-color: white;
+        top: 30px;
+        left: 30px;
+      }
+
+    #menuToggle input:checked ~ ul {
+        background-color: white;
+    }
+
+    #menu li {
+        font-size: 30px;
+
+        text-align: center;
+    }
+
+    .menu-icons {
+        position: initial;
+        margin-top: 30px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+  #menu {
+    width: 110vw;
+  }
+}
