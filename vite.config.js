@@ -7,9 +7,12 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
+      // Same as `@` — used by composables shared with 2026-portfolio (`@er/...` imports).
+      '@er': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-  base: '/',
+  // For embedding in 2026-portfolio: VITE_BASE=/european-remodeling/ npm run build
+  base: process.env.VITE_BASE || '/',
   build: {
     outDir: 'dist',
     emptyOutDir: true,

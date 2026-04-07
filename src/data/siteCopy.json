@@ -1,0 +1,496 @@
+{
+  "home": {
+    "hero": {
+      "eyebrow": "Restore8 GA",
+      "title": "Exterior Home Repairs Built to Protect and Last",
+      "paragraphs": [
+        "Restore8 GA helps homeowners across Metro Atlanta solve exterior repair issues with practical scopes, dependable craftsmanship, and repairs built for long-term performance.",
+        "We handle siding repair and replacement, soffit and fascia repair, trim replacement, porch and deck repair, structural exterior fixes, and weather-damage repair."
+      ],
+      "primaryLabel": "Request a Repair Estimate"
+    },
+    "overview": {
+      "eyebrow": "About Restore8",
+      "title": "Exterior repair and basement work built around the parts of the home homeowners cannot ignore",
+      "paragraphs": [
+        "Restore8 is a local contractor focused on practical repair and improvement work that protects the home and makes it function better. We specialize in exterior repairs for the areas that take the most wear, including siding, trim, soffit, fascia, porches, decks, and structural exterior problem spots.",
+        "We also help homeowners turn underused lower levels into practical living space with basement finishing, basement remodeling, build-outs, framing improvements, and unfinished basement conversion work.",
+        "Our approach is straightforward: clear communication, dependable craftsmanship, and work built for long-term reliability instead of cosmetic-only fixes."
+      ]
+    },
+    "whatWeOffer": {
+      "eyebrow": "What We Offer",
+      "title": "Practical services built around the work homeowners actually need",
+      "items": [
+        {
+          "title": "Exterior Repair",
+          "description": "We solve the visible exterior issues that affect protection, durability, and curb appeal before they become larger problems.",
+          "list": [
+            "Siding repair and replacement",
+            "Soffit and fascia repair",
+            "Trim replacement",
+            "Weather-damage repair"
+          ],
+          "ctaLabel": "Learn More",
+          "ctaTo": "/exterior"
+        },
+        {
+          "title": "Porch & Deck Work",
+          "description": "We repair and rebuild worn exterior living areas with a focus on safety, structural reliability, and long-term use.",
+          "list": [
+            "Porch repair and rebuilds",
+            "Deck repair contractor services",
+            "Stair and railing corrections",
+            "Structural exterior fixes"
+          ],
+          "ctaLabel": "Learn More",
+          "ctaTo": "/exterior"
+        },
+        {
+          "title": "Basement Finishing",
+          "description": "We turn unfinished or underused lower levels into practical living space with thoughtful layouts and dependable construction.",
+          "list": [
+            "Basement finishing",
+            "Basement build-outs",
+            "Layout and framing improvements",
+            "Unfinished basement conversion"
+          ],
+          "ctaLabel": "Learn More",
+          "ctaTo": "/basement"
+        }
+      ]
+    },
+    "teasers": {
+      "title": "Explore Our Core Services",
+      "items": [
+        {
+          "title": "Exterior",
+          "paragraphs": [
+            "Protect your home from ongoing damage with practical exterior repairs that address the real problem, not just the surface symptoms.",
+            "We handle siding, trim, soffit, fascia, porch, deck, and structural exterior repair work with durability in mind."
+          ],
+          "ctaLabel": "View Exterior Services",
+          "ctaTo": "/exterior"
+        },
+        {
+          "title": "Basement",
+          "paragraphs": [
+            "Turn an unfinished or outdated basement into useful square footage with a layout and build plan designed around how you live.",
+            "From finishing and build-outs to framing improvements and unfinished basement conversion, we create lower-level spaces that feel intentional."
+          ],
+          "ctaLabel": "View Basement Services",
+          "ctaTo": "/basement"
+        }
+      ]
+    },
+    "testimonials": [
+      {
+        "quote": "Amazing results, from estimate to final results. Our contractors were professional and brought our vision to life"
+      },
+      {
+        "quote": "Professional, on time, and the quality exceeded our expectations. We could not be happier."
+      }
+    ],
+    "quoteForm": {
+      "title": "Request a Repair Estimate or Basement Consultation",
+      "intro": "If your home needs exterior repairs, structural updates, or a plan to turn an unfinished basement into useful living space, we’re ready to help.",
+      "intro2": "Restore8 GA serves homeowners across the Greater Atlanta area with practical scopes, honest communication, and workmanship focused on durability.",
+      "intro3": "Tell us what you’re seeing at the property and we’ll follow up to discuss the next step.",
+      "submitLabel": "Submit"
+    }
+  },
+  "exterior": {
+    "hero": {
+      "title": "Exterior",
+      "paragraphs": [
+        "Restore8 GA specializes in exterior home repair for homeowners who need practical solutions, dependable workmanship, and repairs built for long-term performance."
+      ],
+      "ctaLabel": "Request a Repair Estimate"
+    },
+    "intro": {
+      "eyebrow": "Exterior Repairs",
+      "title": "Exterior home repair services that protect your property",
+      "paragraphs": [
+        "We provide exterior home repair for the issues that affect protection, safety, and curb appeal: damaged siding, failing trim, rotted soffit and fascia, worn porches, weak deck framing, and other visible exterior deterioration.",
+        "Whether you need a siding repair contractor for targeted replacement or broader structural exterior fixes after age or weather exposure, we focus on durable materials, sound installation, and work that holds up season after season."
+      ]
+    },
+    "services": {
+      "eyebrow": "Services",
+      "title": "Exterior Services",
+      "introParagraphs": [
+        "We focus on the exterior work that protects the structure, restores curb appeal, and helps homeowners solve visible damage before it becomes a larger problem.",
+        "That includes targeted repair scopes, replacement work where materials have failed, and practical structural fixes built for long-term reliability."
+      ],
+      "columns": [
+        {
+          "title": "Exterior Repairs",
+          "lead": "Address wear, deterioration, and visible damage before it spreads.",
+          "bullets": [
+            "Exterior home repair",
+            "Weather-damage repair",
+            "Rot-damaged material replacement",
+            "General exterior corrections"
+          ]
+        },
+        {
+          "title": "Siding & Trim Repair",
+          "lead": "Restore the exterior envelope and refresh failing finish materials.",
+          "bullets": [
+            "Siding repair and replacement",
+            "Trim replacement",
+            "Exterior trim repair",
+            "Detail and finish corrections"
+          ]
+        },
+        {
+          "title": "Porch & Deck Repairs",
+          "lead": "Improve safety, structure, and appearance in outdoor living areas.",
+          "bullets": [
+            "Porch repair and rebuilds",
+            "Deck repair contractor services",
+            "Stair and railing corrections",
+            "Framing-related deck repairs"
+          ]
+        },
+        {
+          "title": "Structural Exterior Fixes",
+          "lead": "Handle the underlying issues that affect durability and performance.",
+          "bullets": [
+            "Soffit and fascia repair",
+            "Structural exterior fixes",
+            "Water-intrusion damage repair",
+            "Problem-area rebuilding"
+          ]
+        }
+      ],
+      "ctaLabel": "Request a Repair Estimate"
+    },
+    "process": {
+      "eyebrow": "Our Process",
+      "steps": [
+        {
+          "title": "Inspection & Estimate",
+          "description": "We inspect the affected area, discuss the condition of the exterior, and outline a clear repair scope."
+        },
+        {
+          "title": "Scope & Planning",
+          "description": "We define materials, replacement needs, structural considerations, and the sequence required for solid results."
+        },
+        {
+          "title": "Repair Phase",
+          "description": "Our crew completes the work with attention to craftsmanship, structural reliability, and jobsite organization."
+        },
+        {
+          "title": "Final Review",
+          "description": "We walk the project with you and make sure the finished work is ready for long-term use."
+        }
+      ]
+    },
+    "categories": {
+      "title": "Exterior repair categories",
+      "items": [
+        {
+          "title": "Exterior Repairs",
+          "description": "We address deterioration and damage before it turns into a larger structural or moisture problem.",
+          "bullets": [
+            "Exterior home repair",
+            "Weather-damage repair",
+            "Structural exterior fixes",
+            "Rot-damaged material replacement"
+          ]
+        },
+        {
+          "title": "Siding, Trim, Porch & Deck Work",
+          "description": "We complete the visible, high-impact repair work that keeps the exterior sound and the home looking cared for.",
+          "bullets": [
+            "Siding & trim repair",
+            "Soffit and fascia repair",
+            "Porch & deck repairs",
+            "Deck repair contractor services",
+            "Trim replacement"
+          ]
+        }
+      ]
+    },
+    "quoteForm": {
+      "title": "Request an Exterior Repair Estimate",
+      "intro": "Restore8 GA helps homeowners move forward with confidence when they need exterior repair work, siding replacement, structural fixes, or weather-damage repairs.",
+      "intro2": "If you need a local contractor for siding, deck, trim, soffit, fascia, or weather-damage repairs, we will start with a practical conversation about the condition of the home and the right scope.",
+      "intro3": "Tell us what needs attention and we’ll follow up with the next steps for your estimate.",
+      "submitLabel": "Submit"
+    }
+  },
+  "basement": {
+    "hero": {
+      "title": "Basement",
+      "paragraphs": [
+        "Restore8 GA helps homeowners turn unfinished, outdated, or underused basements into practical living space with dependable scopes and durable workmanship.",
+        "We focus on basement finishing, basement remodeling, new build-outs, framing improvements, and unfinished basement conversion work designed around real everyday use."
+      ],
+      "ctaLabel": "Request a Basement Consultation"
+    },
+    "intro": {
+      "eyebrow": "Basement Finishing",
+      "title": "Basement finishing and build-outs that improve how your home works",
+      "paragraphs": [
+        "We help homeowners get more from the lower level of the home with basement finishing plans that improve comfort, layout, and usability. Whether you want a family room, office, guest area, recreation space, or a more complete multi-use layout, we build with function in mind.",
+        "Our approach is practical: define how the space should work, plan the framing and layout clearly, coordinate waterproofing needs when necessary, and complete the build with durable finish work that feels integrated with the rest of the house."
+      ]
+    },
+    "services": {
+      "eyebrow": "Services",
+      "title": "Basement Services",
+      "introParagraphs": [
+        "We do not position this work as luxury remodeling. We focus on the basement scopes that help homeowners gain more useful square footage and better everyday function.",
+        "That includes basement finishing, layout improvements, framing, build-outs, and practical planning around moisture-related conditions."
+      ],
+      "columns": [
+        {
+          "title": "Basement Finishing",
+          "lead": "Turn open or outdated lower levels into comfortable living space.",
+          "bullets": [
+            "Finished family rooms",
+            "Flexible living areas",
+            "Basement ceiling and wall finishing",
+            "Lighting and usability improvements"
+          ]
+        },
+        {
+          "title": "Basement Renovations",
+          "lead": "Update older basement layouts to better fit how you live now.",
+          "bullets": [
+            "Layout reconfiguration",
+            "Framing updates",
+            "Room repurposing",
+            "Functional redesign"
+          ]
+        },
+        {
+          "title": "Build-Outs & Conversions",
+          "lead": "Create defined rooms from unfinished basement space.",
+          "bullets": [
+            "Unfinished basement conversion",
+            "Office and guest room build-outs",
+            "Storage and utility room planning",
+            "Living space expansion"
+          ]
+        },
+        {
+          "title": "Coordination & Reliability",
+          "lead": "Plan the project around conditions that affect long-term performance.",
+          "bullets": [
+            "Waterproofing coordination",
+            "Moisture-aware planning",
+            "Practical material selection",
+            "Reliable project sequencing"
+          ]
+        }
+      ],
+      "ctaLabel": "Request a Basement Consultation"
+    },
+    "process": {
+      "eyebrow": "The process",
+      "title": "Our Basement Build Process",
+      "steps": [
+        {
+          "title": "Property Walkthrough & Scope",
+          "description": "We inspect the basement, discuss your goals, and define the scope for the space."
+        },
+        {
+          "title": "Budget & Timeline Alignment",
+          "description": "We align the layout, materials, and project sequence with your budget and timeline."
+        },
+        {
+          "title": "Construction & Coordination",
+          "description": "We complete the framing, build-out, and finishing work with organized scheduling and attention to durability."
+        },
+        {
+          "title": "Final Inspection & Delivery",
+          "description": "We review the finished basement with you and confirm the space is ready for use."
+        }
+      ]
+    },
+    "features": {
+      "title": "Why Homeowners Choose Restore8 GA for Basement Work",
+      "items": [
+        {
+          "title": "Reliable. Efficient. Built for Scale.",
+          "description": "",
+          "bullets": [
+            "Clear basement scopes and communication",
+            "Quality materials and workmanship that lasts",
+            "Layouts designed around real daily use",
+            "Dependable project coordination"
+          ]
+        },
+        {
+          "title": "Popular Basement Goals",
+          "description": "",
+          "bullets": [
+            "Family rooms",
+            "Home offices",
+            "Guest areas",
+            "Flexible multi-use spaces"
+          ]
+        }
+      ]
+    },
+    "testimonials": [
+      {
+        "quote": "Amazing results, from estimates to final results. Our contractors were professional and brought our vision to life"
+      }
+    ],
+    "quoteForm": {
+      "title": "Request a Basement Consultation",
+      "intro": "Tell us about the basement space you want to finish, remodel, or build out and we’ll provide the next step.",
+      "submitLabel": "Submit"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About Us",
+      "paragraphs": [
+        "Restore8 GA is built around the kind of work homeowners often need most: exterior repairs, structural updates, and basement improvements that make underused space functional and dependable.",
+        "We bring a practical, skilled-trades approach to every job, with clear communication and workmanship focused on long-term performance."
+      ],
+      "ctaLabel": "Request an Estimate"
+    },
+    "whoWeAre": {
+      "eyebrow": "Who we are",
+      "title": "A repair-focused contractor homeowners can count on",
+      "paragraphs": [
+        "Restore8 GA was built to serve homeowners who need real repair expertise, not just cosmetic updates. Our work focuses on the parts of the house that take the most abuse and require dependable solutions: siding, trim, soffit, fascia, porches, decks, and basement spaces that are unfinished, outdated, or underused.",
+        "We believe homeowners deserve honest guidance when something on the property needs attention. That means identifying the problem clearly, recommending a sensible scope, and completing the work with craftsmanship that supports the structure and the day-to-day use of the home.",
+        "Over the years, we have developed a process centered on reliability, communication, and jobsite accountability. Whether we are repairing a damaged exterior section or planning a basement build-out, we stay focused on durable construction and practical results.",
+        "Clients choose us because we treat the work seriously, respect the home, and follow through from estimate to final walkthrough."
+      ]
+    },
+    "process": {
+      "eyebrow": "Our process",
+      "title": "Our Simple, Start-to-Finish Process",
+      "introParagraphs": [
+        "Our process is built for homeowners who need clarity. We inspect the condition, define the scope, and complete the work with a practical sequence that supports lasting results.",
+        "Whether the project is an exterior repair or a basement build-out, we keep the next steps clear from the first walkthrough onward."
+      ],
+      "columns": [
+        {
+          "title": "Walkthrough & Inspection",
+          "lead": "We look at the condition of the home, identify the problem areas, and discuss your priorities.",
+          "bullets": []
+        },
+        {
+          "title": "Scope & Planning",
+          "lead": "We develop the repair or build plan, material approach, and project sequence.",
+          "bullets": []
+        },
+        {
+          "title": "Construction & Coordination",
+          "lead": "We complete the work with attention to durability, communication, and jobsite accountability.",
+          "bullets": []
+        },
+        {
+          "title": "Final Review",
+          "lead": "We review the completed work with you and close out the project with confidence.",
+          "bullets": []
+        }
+      ],
+      "ctaLabel": "Request a Quote"
+    },
+    "whatSetsUsApart": {
+      "eyebrow": "Why Restore8 GA",
+      "title": "What Sets Us Apart",
+      "items": [
+        {
+          "title": "Repair-Minded Expertise",
+          "description": "We focus on solving the underlying issue, not just covering it up. That approach matters when exterior damage, rot, moisture exposure, or basement layout problems affect how the home performs."
+        },
+        {
+          "title": "Durability and Craftsmanship",
+          "description": "From exterior material replacement to basement framing and finishing, our work is planned for long-term use, clean execution, and structural reliability."
+        },
+        {
+          "title": "Useful Basement Transformations",
+          "description": "We help homeowners turn underused lower levels into living space that works better, with smarter layouts, coordinated waterproofing needs, and finish plans that fit everyday life."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Helpful Answers",
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "What services does Restore8 GA specialize in?",
+          "answer": "Our core work is exterior home repair and basement improvement. That includes siding repair and replacement, trim replacement, soffit and fascia repair, porch and deck repair or rebuild work, structural exterior fixes, weather-damage repair, basement finishing, basement remodeling, basement build-outs, framing updates, and unfinished basement conversion projects."
+        },
+        {
+          "question": "Are you licensed and insured?",
+          "answer": "Restore8 GA operates as a Georgia state-licensed and insured contractor. That gives homeowners added peace of mind when the work involves structural repairs, exterior restoration, or basement construction inside an occupied home."
+        },
+        {
+          "question": "Where do you work?",
+          "answer": "We work throughout Metro Atlanta and the surrounding greater Atlanta market. If you are unsure whether your property falls in our service area, share the location when you reach out and we will confirm next steps."
+        },
+        {
+          "question": "Do you work with homeowners and property owners?",
+          "answer": "Yes. Our primary audience is homeowners, but we also work with property owners who need exterior repairs or basement upgrades completed with durability, straightforward communication, and a practical scope."
+        },
+        {
+          "question": "How do I get started?",
+          "answer": "After you contact us or use Request a Quote, we gather basics about your goals and property. We then typically schedule a walkthrough so we can see the space, discuss constraints and opportunities, and understand budget and timing. From there we develop a detailed scope — what is included, what decisions are still open, and how the project will move through planning and construction."
+        },
+        {
+          "question": "Can you help with unfinished basement conversion projects?",
+          "answer": "Yes. We handle unfinished basement conversion work for homeowners who want to create usable living space. We can improve framing and layout, build out rooms, coordinate waterproofing needs when necessary, and complete finishing work that makes the basement feel integrated with the rest of the house."
+        },
+        {
+          "question": "How long does a repair or basement project take?",
+          "answer": "Timeline depends on the condition of the existing structure, how much replacement or reframing is needed, material lead times, and the overall scope. After the walkthrough, we provide a clearer expectation based on the actual work required."
+        },
+        {
+          "question": "Do you coordinate waterproofing for basement projects?",
+          "answer": "Yes. When basement conditions show moisture concerns, we can coordinate waterproofing-related work as part of the overall project planning so the finished space has a better foundation for long-term performance."
+        },
+        {
+          "question": "What should I share when asking for an estimate?",
+          "answer": "The most helpful starting details are the area of the home, the visible issue or goal, how long the problem has been present, and any photos or notes about water damage, structural concerns, or how you want the basement to function."
+        }
+      ]
+    },
+    "quoteForm": {
+      "title": "Request a Repair Estimate or Basement Consultation",
+      "intro": "If your home needs exterior repair work or you are planning a basement finishing project, we are ready to talk through the condition, the scope, and the right next step.",
+      "intro2": "Share a few details and Restore8 GA will follow up to schedule an estimate or basement consultation.",
+      "messageLabel": "Tell Us About Your Project",
+      "submitLabel": "Submit"
+    }
+  },
+  "requestQuote": {
+    "hero": {
+      "title": "Request a Quote",
+      "subtitle": "Request an exterior repair estimate or basement consultation and we’ll get back to you promptly.",
+      "ctaLabel": "Get in touch"
+    },
+    "quoteForm": {
+      "title": "Request a Repair Estimate or Basement Consultation",
+      "intro": "Tell us about the exterior issue or basement project you need help with and we’ll follow up with the next step.",
+      "intro2": "Restore8 GA works with homeowners across the Greater Atlanta area on exterior home repair, siding and trim replacement, porch and deck work, and basement finishing or build-out projects.",
+      "intro3": "Share the condition of the space, the repairs you’ve noticed, or how you want the basement to function.",
+      "submitLabel": "Submit"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact",
+      "subtitle": "Request a repair estimate or basement consultation. We’ll get back to you promptly.",
+      "ctaLabel": "Request an Estimate"
+    },
+    "quoteForm": {
+      "title": "Request a Repair Estimate or Basement Consultation",
+      "intro": "Tell us what is happening at the property and what kind of help you need.",
+      "intro2": "Restore8 GA serves Greater Atlanta homeowners with exterior home repair, structural exterior fixes, siding and trim work, porch and deck repairs, and basement finishing services.",
+      "intro3": "We’ll review your message and follow up to discuss the next step.",
+      "submitLabel": "Submit"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+// -----------------------------------------------------------------------------
+// Global foundation – reset, html/body, #app.
+// -----------------------------------------------------------------------------
+
+@use './variables' as v;
+@use './mixins' as m;
+@use './breakpoints' as bp;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  padding-top: v.$header-height;
+  background-color: v.$color-bg-page;
+  flex: 1;
+}
+
+// Uniform vertical spacing between major page sections (see $space-page-section-gap-*).
+// Footer is pulled up by the same amount so there is no gap between the last section (usually the quote form) and the footer.
+.page-content {
+  --page-section-gap: #{v.$space-page-section-gap-mobile};
+  min-height: calc(100vh - v.$header-height);
+  display: flex;
+  flex-direction: column;
+  gap: var(--page-section-gap);
+  @include m.up(bp.$bp-lg) {
+    --page-section-gap: #{v.$space-page-section-gap-desktop};
+  }
+}
+
+.page-content > footer.site-footer {
+  margin-top: calc(-1 * var(--page-section-gap));
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid v.$color-border-focus;
+  outline-offset: 2px;
+}

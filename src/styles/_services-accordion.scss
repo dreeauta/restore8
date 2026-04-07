@@ -1,0 +1,112 @@
+// -----------------------------------------------------------------------------
+// Services Accordion (FAQ) – Figma node 36:1270. Token-only.
+// -----------------------------------------------------------------------------
+
+@use './variables' as v;
+@use './mixins' as m;
+@use './breakpoints' as bp;
+
+.services-accordion {
+  padding-block: 0;
+  padding-inline: 0;
+  background-color: v.$color-bg-surface-1;
+}
+
+.services-accordion__inner {
+  max-width: v.$container-max;
+  margin-inline: auto;
+  padding-block: v.$space-section-inner-y-mobile;
+  padding-inline: v.$container-padding-mobile;
+  @include m.up(bp.$bp-lg) {
+    padding-inline: v.$space-section-x-figma;
+    padding-block: v.$space-section-inner-y-desktop;
+  }
+}
+
+.services-accordion__head {
+  width: 100%;
+  text-align: center;
+  padding-inline: 0;
+}
+
+.services-accordion__eyebrow {
+  @include m.type-eyebrow;
+  margin: 0 0 v.$space-2;
+}
+
+.services-accordion__title {
+  font-family: v.$font-family-heading;
+  font-size: 28px;
+  font-weight: v.$font-weight-bold;
+  line-height: 1.25;
+  color: v.$color-text-primary;
+  margin: 0;
+  @include m.up(bp.$bp-lg) {
+    font-size: v.$font-size-section-title;
+  }
+}
+
+.services-accordion__list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-block: v.$space-block;
+  padding-inline: 0;
+}
+
+.services-accordion__item {
+  border-bottom: 1px solid v.$color-border-muted;
+  padding-bottom: v.$space-4;
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+.services-accordion__trigger {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: v.$space-2;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  font-family: v.$font-family-heading;
+  font-size: 22px;
+  font-weight: v.$font-weight-bold;
+  line-height: 1.25;
+  color: v.$color-text-primary;
+  @include m.up(bp.$bp-md) {
+    font-size: v.$font-size-card-title;
+  }
+  &:hover {
+    color: v.$color-text-link-hover;
+  }
+  &:focus-visible {
+    @include m.focus-ring;
+  }
+}
+
+.services-accordion__marker {
+  flex-shrink: 0;
+  display: inline-block;
+  width: 1.25em;
+}
+
+.services-accordion__content {
+  overflow: hidden;
+}
+
+.services-accordion__content-inner {
+  padding-top: v.$space-3;
+  padding-left: 1.25em;
+}
+
+.services-accordion__answer {
+  @include m.type-body-lg;
+  color: v.$color-text-primary;
+  margin: 0;
+}

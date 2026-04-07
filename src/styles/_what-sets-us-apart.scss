@@ -1,0 +1,104 @@
+// -----------------------------------------------------------------------------
+// What Sets Us Apart – About page, dark teal band with 3 image + text cards.
+// -----------------------------------------------------------------------------
+
+@use './variables' as v;
+@use './mixins' as m;
+@use './breakpoints' as bp;
+
+.what-sets-apart {
+  padding-block: 0;
+  padding-inline: 0;
+  background-color: v.$color-hero-interior-bg;
+}
+
+.what-sets-apart__inner {
+  max-width: v.$container-max;
+  margin-inline: auto;
+  padding-block: v.$space-section-inner-y-mobile;
+  padding-inline: v.$container-padding-mobile;
+  @include m.up(bp.$bp-lg) {
+    padding-block: v.$space-section-inner-y-desktop;
+    padding-inline: v.$space-section-x-figma;
+  }
+}
+
+.what-sets-apart__head {
+  text-align: center;
+  margin-bottom: v.$space-block;
+  max-width: 48rem;
+  margin-inline: auto;
+}
+
+.what-sets-apart__eyebrow {
+  @include m.type-eyebrow;
+  color: v.$color-text-inverse;
+  margin: 0 0 v.$space-2;
+}
+
+.what-sets-apart__title {
+  font-family: v.$font-family-heading;
+  font-size: 32px;
+  font-weight: v.$font-weight-bold;
+  line-height: 1.2;
+  color: v.$color-text-inverse;
+  margin: 0;
+  @include m.up(bp.$bp-lg) {
+    font-size: v.$font-size-section-title;
+  }
+}
+
+.what-sets-apart__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-8;
+  @include m.up(bp.$bp-lg) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: v.$space-column-gap;
+    align-items: stretch;
+  }
+}
+
+.what-sets-apart__card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.what-sets-apart__media {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: v.$radius-card;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.08);
+  margin-bottom: v.$space-4;
+}
+
+.what-sets-apart__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.what-sets-apart__body {
+  flex: 1;
+}
+
+.what-sets-apart__card-title {
+  font-family: v.$font-family-heading;
+  font-size: 22px;
+  font-weight: v.$font-weight-bold;
+  line-height: 1.25;
+  color: v.$color-text-inverse;
+  margin: 0 0 v.$space-2;
+  @include m.up(bp.$bp-md) {
+    font-size: v.$font-size-h4;
+  }
+}
+
+.what-sets-apart__card-text {
+  @include m.type-body-lg;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0;
+}

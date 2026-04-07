@@ -1,0 +1,348 @@
+// -----------------------------------------------------------------------------
+// Primitive component styles – tokens only. Used by AppButton, AppInput, etc.
+// -----------------------------------------------------------------------------
+
+@use './variables' as v;
+@use './mixins' as m;
+
+// -----------------------------------------------------------------------------
+// AppButton
+// -----------------------------------------------------------------------------
+.app-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: v.$control-height;
+  padding: v.$space-control-y v.$space-control-x;
+  font-family: v.$font-family-body;
+  font-size: v.$font-size-body;
+  font-weight: v.$font-weight-bold;
+  line-height: 1.25;
+  border-radius: v.$radius-2;
+  border: none;
+  cursor: pointer;
+  transition: background-color v.$transition-base, color v.$transition-base, transform v.$transition-fast;
+  text-decoration: none;
+
+  &:focus-visible {
+    @include m.focus-ring;
+  }
+
+  &:disabled,
+  &.is-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &.app-button--full-width {
+    width: 100%;
+  }
+}
+
+.app-button--primary {
+  background-color: v.$color-brand-primary;
+  color: v.$color-neutral-0;
+
+  &:hover:not(:disabled):not(.is-disabled) {
+    background-color: v.$color-brand-primary-hover;
+  }
+}
+
+.app-button--secondary {
+  background-color: v.$color-bg-surface-1;
+  color: v.$color-text-primary;
+  border: 1px solid v.$color-border-default;
+
+  &:hover:not(:disabled):not(.is-disabled) {
+    background-color: v.$color-bg-surface-2;
+  }
+}
+
+.app-button--text {
+  background-color: transparent;
+  color: v.$color-text-link;
+  padding: v.$space-2 v.$space-3;
+
+  &:hover:not(:disabled):not(.is-disabled) {
+    color: v.$color-text-link-hover;
+  }
+}
+
+// Figma: dark CTA (hero, who we work with) – use variant="dark"
+.app-button--dark {
+  background-color: v.$color-cta-dark-bg;
+  color: v.$color-cta-dark-text;
+
+  &:hover:not(:disabled):not(.is-disabled) {
+    background-color: v.$color-cta-dark-bg-hover;
+    color: v.$color-cta-dark-text;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// AppInput (text input + textarea)
+// -----------------------------------------------------------------------------
+.app-input {
+  display: block;
+}
+
+.app-input__label {
+  display: block;
+  font-family: v.$font-family-body;
+  font-size: v.$font-size-small;
+  font-weight: v.$font-weight-semibold;
+  color: v.$color-text-primary;
+  margin-bottom: v.$space-1;
+}
+
+.app-input__field {
+  width: 100%;
+  height: v.$control-height;
+  padding: v.$space-control-y v.$space-control-x;
+  font-family: v.$font-family-body;
+  font-size: v.$font-size-body;
+  line-height: v.$line-height-body;
+  color: v.$color-text-primary;
+  background-color: v.$color-bg-surface-1;
+  border: 1px solid v.$color-border-default;
+  border-radius: v.$radius-1;
+  transition: border-color v.$transition-base, box-shadow v.$transition-base;
+
+  &::placeholder {
+    color: v.$color-text-secondary;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: v.$color-border-focus;
+    box-shadow: 0 0 0 2px rgba(123, 185, 250, 0.25);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.app-input.is-error .app-input__field {
+  border-color: v.$color-border-error;
+}
+
+.app-input.is-error .app-input__field:focus {
+  box-shadow: 0 0 0 2px rgba(197, 48, 48, 0.2);
+}
+
+.app-input--multiline .app-input__field {
+  height: auto;
+  min-height: 120px;
+  resize: vertical;
+}
+
+.app-input__message {
+  display: block;
+  font-size: v.$font-size-small;
+  margin-top: v.$space-1;
+}
+
+.app-input:not(.is-error) .app-input__message {
+  color: v.$color-text-secondary;
+}
+
+.app-input.is-error .app-input__message {
+  color: v.$color-text-error;
+}
+
+// -----------------------------------------------------------------------------
+// AppSelect
+// -----------------------------------------------------------------------------
+.app-select {
+  display: block;
+}
+
+.app-select__label {
+  display: block;
+  font-family: v.$font-family-body;
+  font-size: v.$font-size-small;
+  font-weight: v.$font-weight-semibold;
+  color: v.$color-text-primary;
+  margin-bottom: v.$space-1;
+}
+
+.app-select__field {
+  width: 100%;
+  height: v.$control-height;
+  padding: v.$space-control-y v.$space-control-x;
+  font-family: v.$font-family-body;
+  font-size: v.$font-size-body;
+  line-height: v.$line-height-body;
+  color: v.$color-text-primary;
+  background-color: v.$color-bg-surface-1;
+  border: 1px solid v.$color-border-default;
+  border-radius: v.$radius-1;
+  cursor: pointer;
+  transition: border-color v.$transition-base, box-shadow v.$transition-base;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right v.$space-control-x center;
+  padding-right: 2.5rem;
+
+  &:focus {
+    outline: none;
+    border-color: v.$color-border-focus;
+    box-shadow: 0 0 0 2px rgba(123, 185, 250, 0.25);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.app-select.is-error .app-select__field {
+  border-color: v.$color-border-error;
+}
+
+.app-select__message {
+  display: block;
+  font-size: v.$font-size-small;
+  margin-top: v.$space-1;
+  color: v.$color-text-secondary;
+}
+
+.app-select.is-error .app-select__message {
+  color: v.$color-text-error;
+}
+
+// -----------------------------------------------------------------------------
+// AppCheckbox
+// -----------------------------------------------------------------------------
+.app-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: v.$space-2;
+  cursor: pointer;
+}
+
+.app-checkbox__control {
+  flex-shrink: 0;
+  width: v.$control-checkbox-size;
+  height: v.$control-checkbox-size;
+  border: 1px solid v.$color-border-default;
+  border-radius: v.$radius-1;
+  background-color: v.$color-bg-surface-1;
+  appearance: none;
+  cursor: pointer;
+  transition: border-color v.$transition-base, background-color v.$transition-base;
+
+  &:checked {
+    background-color: v.$color-brand-primary;
+    border-color: v.$color-brand-primary;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M2 6l3 3 5-6'/%3E%3C/svg%3E");
+    background-size: 10px 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &:focus-visible {
+    @include m.focus-ring;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.app-checkbox.is-error .app-checkbox__control {
+  border-color: v.$color-border-error;
+}
+
+.app-checkbox__label {
+  font-family: v.$font-family-body;
+  font-size: v.$font-size-body;
+  color: v.$color-text-primary;
+}
+
+.app-checkbox:has(input:disabled) {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+// -----------------------------------------------------------------------------
+// AppRadio
+// -----------------------------------------------------------------------------
+.app-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: v.$space-2;
+  cursor: pointer;
+}
+
+.app-radio__control {
+  flex-shrink: 0;
+  width: v.$control-checkbox-size;
+  height: v.$control-checkbox-size;
+  border: 1px solid v.$color-border-default;
+  border-radius: 50%;
+  background-color: v.$color-bg-surface-1;
+  appearance: none;
+  cursor: pointer;
+  transition: border-color v.$transition-base, background-color v.$transition-base;
+
+  &:checked {
+    background-color: v.$color-bg-surface-1;
+    border-width: 2px;
+    border-color: v.$color-brand-primary;
+    box-shadow: inset 0 0 0 2px v.$color-bg-surface-1, inset 0 0 0 4px v.$color-brand-primary;
+  }
+
+  &:focus-visible {
+    @include m.focus-ring;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.app-radio.is-error .app-radio__control {
+  border-color: v.$color-border-error;
+}
+
+.app-radio__label {
+  font-family: v.$font-family-body;
+  font-size: v.$font-size-body;
+  color: v.$color-text-primary;
+}
+
+.app-radio:has(input:disabled) {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+// Legacy alias – use AppButton component in new code. Remove when all .app-btn usages are migrated.
+.app-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: v.$control-height;
+  padding: v.$space-control-y v.$space-control-x;
+  font-family: v.$font-family-body;
+  font-size: v.$font-size-body;
+  font-weight: v.$font-weight-bold;
+  color: v.$color-neutral-0;
+  background-color: v.$color-brand-primary;
+  border: none;
+  border-radius: v.$radius-2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color v.$transition-base;
+  &:hover {
+    background-color: v.$color-brand-primary-hover;
+  }
+  &:focus-visible {
+    @include m.focus-ring;
+  }
+}

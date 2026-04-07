@@ -1,0 +1,226 @@
+// -----------------------------------------------------------------------------
+// Design tokens – single source of truth. No selectors.
+// Figma-derived where specified; normalized scale otherwise.
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+// Colors – brand (Figma design system labels)
+// -----------------------------------------------------------------------------
+$color-brand-primary: #f34e4e;
+$color-brand-secondary: #f2ece2;
+$color-brand-action: #7bb9fa;
+$color-brand-primary-hover: #e04545;
+$color-tan: #f2ece2;
+// Homeowners / interior hero content (mockup)
+$color-beige-light: #f1e9dc;
+
+// -----------------------------------------------------------------------------
+// Colors – neutrals
+// -----------------------------------------------------------------------------
+$color-neutral-0: #ffffff;
+$color-neutral-300: #d0d0d0;
+$color-neutral-900: #282828;
+
+// -----------------------------------------------------------------------------
+// Colors – semantic (Figma variable defs used in components)
+// -----------------------------------------------------------------------------
+$color-text-primary: #302424;
+$color-text-secondary: #bd9e94;
+$color-text-inverse: #ffffff;
+$color-text-link: #2f4f4f;
+$color-text-link-hover: #243030;
+$color-text-error: #c53030;
+
+$color-bg-page: #ffffff;
+$color-bg-surface-1: #ffffff;
+$color-bg-surface-2: #f2ece2;
+
+$color-border-default: #d0d0d0;
+$color-border-muted: rgba(40, 40, 40, 0.12);
+$color-border-focus: #7bb9fa;
+$color-border-error: #c53030;
+
+$color-overlay-scrim: rgba(40, 40, 40, 0.6);
+
+// Figma: dark CTA (primary button on light backgrounds – e.g. hero, who we work with)
+$color-cta-dark-bg: #243030;
+$color-cta-dark-bg-hover: #2f4f4f;
+$color-cta-dark-text: #f2ece2;
+
+// Figma Our Process step card backgrounds (left to right)
+$color-process-1: #243030;
+$color-process-2: #2f4f4f;
+$color-process-3: #406464;
+$color-process-4: #4b7c7c;
+
+// Figma testimonial / hero interior
+$color-hero-interior-bg: #2f4f4f;
+$radius-testimonial-image: 90px; // top-right only
+
+// Figma 3 Column: frosted overlay on cards (rgba(238,231,218,0.8))
+$color-three-col-overlay: rgba(242, 236, 226, 0.82);
+$height-three-col-card: 400px;
+
+// -----------------------------------------------------------------------------
+// Spacing scale (8px base)
+// -----------------------------------------------------------------------------
+$space-0: 0;
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 12px;
+$space-4: 16px;
+$space-5: 20px;
+$space-6: 24px;
+$space-8: 32px;
+$space-10: 40px;
+$space-12: 48px;
+$space-16: 64px;
+$space-20: 80px;
+
+// Uniform vertical gap between major blocks inside `.page-content`
+$space-page-section-gap-mobile: 40px;
+$space-page-section-gap-desktop: 75px; // max space *between* section siblings (inner padding is separate)
+
+// Inner vertical padding for stacked sections (pairs with gap — avoids 100px+gap+100px)
+$space-section-inner-y-mobile: 40px;
+$space-section-inner-y-desktop: 48px;
+
+// Section spacing (Figma: 100px section padding common)
+$space-section-y-mobile: 48px;
+$space-section-y-desktop: 80px;
+$space-section-y-figma: 100px;
+$space-section-x-mobile: 16px;
+$space-section-x-desktop: 64px;
+$space-section-x-figma: 90px;
+$space-section-gap: 90px;   // gap between text and image columns (Figma)
+$space-column-gap: 50px;     // gap between cards (e.g. who we work with)
+$space-block: 60px;          // vertical spacing between section title and content
+$width-text-col-image: 738px;
+$height-text-col-image: 440px;
+$height-who-card-image: 350px;
+$space-content-gap: 30px;    // gap between head and body in text column
+
+// Controls
+$space-control-y: 12px;
+$space-control-x: 12px;
+$control-height: 46px;
+$control-checkbox-size: 20px;
+
+// Grid
+$space-grid-gap-sm: 16px;
+$space-grid-gap-md: 24px;
+$space-grid-gap-lg: 32px;
+
+// -----------------------------------------------------------------------------
+// Layout
+// -----------------------------------------------------------------------------
+$container-max: 1400px;
+$container-padding-mobile: 30px;
+$container-padding-desktop: 64px;
+$content-max-text: 640px;
+
+// -----------------------------------------------------------------------------
+// Radii (Figma: 8px controls, 20px cards/panels)
+// -----------------------------------------------------------------------------
+$radius-0: 0;
+$radius-1: 4px;
+$radius-2: 8px;
+$radius-card: 20px;
+$radius-card-sm: 10px; // Figma 47-407: first "Who we work with" card image
+$radius-quote-form-corner: 120px; // Figma 36-815: top-left rounded corner
+
+// -----------------------------------------------------------------------------
+// Shadows
+// -----------------------------------------------------------------------------
+$shadow-0: none;
+$shadow-1: 0 1px 2px rgba(40, 40, 40, 0.08);
+$shadow-2: 0 8px 24px rgba(40, 40, 40, 0.12);
+
+// -----------------------------------------------------------------------------
+// Typography – families (Figma variable defs)
+// -----------------------------------------------------------------------------
+$font-family-heading: 'Crimson Text', Georgia, serif;
+$font-family-body: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+// -----------------------------------------------------------------------------
+// Typography – scale (Figma design system labels, normalized)
+// -----------------------------------------------------------------------------
+$font-size-h1: 48px;
+$line-height-h1: 60px;
+$font-weight-h1: 600;
+$letter-spacing-h1: 0.02em;
+
+$font-size-h2: 34px;
+$line-height-h2: 50px;
+$font-weight-h2: 700;
+
+$font-size-h3: 28px;
+$line-height-h3: 38px;
+$font-weight-h3: 700;
+
+$font-size-h4: 18px;
+$line-height-h4: 22px;
+$font-weight-h4: 600;
+
+$font-size-h5: 18px;
+$line-height-h5: 22px;
+$font-weight-h5: 600;
+
+$font-size-h6: 18px;
+$line-height-h6: 22px;
+$font-weight-h6: 600;
+
+$font-size-body: 16px;
+$line-height-body: 24px;
+$font-weight-body: 400;
+
+// Figma: section body copy
+$font-size-body-lg: 16px;
+$line-height-body-lg: 1.5;
+
+$font-size-small: 13px;
+$line-height-small: 20px;
+
+// Figma: section titles (H2 in content)
+$font-size-section-title: 40px;
+$line-height-section-title: 1.25;
+
+// Figma: hero headline
+$font-size-hero-title: 50px;
+$line-height-hero-title: 50px;
+$letter-spacing-hero-title: 1.4px;
+
+// Figma: card/subsection titles (e.g. Who we work with cards)
+$font-size-card-title: 24px;
+
+// Weights
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+$letter-spacing-default: 0;
+
+// -----------------------------------------------------------------------------
+// Transitions
+// -----------------------------------------------------------------------------
+$transition-fast: 150ms ease;
+$transition-base: 250ms ease;
+
+// -----------------------------------------------------------------------------
+// Z-index
+// -----------------------------------------------------------------------------
+$z-base: 0;
+$z-header: 100;
+$z-header-overlay: 99;
+$z-overlay: 200;
+$z-modal: 300;
+
+// Header (Figma 48-2915, 48-3146): single bar, no top strip
+$header-height: 80px;
+$header-bg: $color-tan;
+$header-padding-x-desktop: 80px;
+$header-padding-x-mobile: 20px;
+$header-padding-y: 15px;
+$header-nav-gap: 20px;
+$header-nav-pl: 100px;

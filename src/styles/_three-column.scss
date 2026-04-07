@@ -1,0 +1,123 @@
+// -----------------------------------------------------------------------------
+// Three Column – Figma 36:763. Title block + dark teal strip with 3 image cards.
+// -----------------------------------------------------------------------------
+
+@use './variables' as v;
+@use './mixins' as m;
+@use './breakpoints' as bp;
+
+
+
+
+.three-column__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: v.$space-content-gap;
+  margin-inline: auto;
+}
+
+.three-column__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: v.$space-2;
+  text-align: center;
+  width: 100%;
+}
+
+.three-column__eyebrow {
+  @include m.type-eyebrow;
+  margin: 0;
+}
+
+.three-column__title {
+  font-family: v.$font-family-heading;
+  font-size: 28px;
+  font-weight: v.$font-weight-bold;
+  line-height: 1;
+  color: v.$color-text-primary;
+  margin: 0;
+  @include m.up(bp.$bp-lg) {
+    font-size: v.$font-size-section-title;
+  }
+}
+
+// Dark teal container wrapping the 3 cards (Figma: col container)
+.three-column__cols {
+  width: 100%;
+  background-color: v.$color-hero-interior-bg;
+  padding: v.$space-section-inner-y-mobile v.$container-padding-mobile;
+  @include m.up(bp.$bp-lg) {
+    padding: v.$space-section-inner-y-desktop v.$space-section-x-figma;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: v.$space-column-gap;
+  }
+}
+
+.three-column__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-6;
+  @include m.up(bp.$bp-lg) {
+    display: flex;
+    flex: 1 1 0;
+    gap: v.$space-column-gap;
+    max-width: v.$container-max;
+    margin-inline: auto;
+  }
+}
+
+.three-column__card {
+  position: relative;
+  overflow: hidden;
+  min-height: 280px;
+  @include m.up(bp.$bp-lg) {
+    flex: 1 1 0;
+    min-width: 0;
+    height: v.$height-three-col-card;
+    min-height: v.$height-three-col-card;
+  }
+}
+
+.three-column__card-media {
+  position: absolute;
+  inset: 0;
+}
+
+.three-column__card-media img {
+  border-radius: v.$radius-card;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+// Frosted bottom strip (Figma: rgba(238,231,218,0.8))
+.three-column__card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-2;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 30px;
+  background-color: v.$color-three-col-overlay;
+}
+
+.three-column__card-title {
+  font-family: v.$font-family-heading;
+  font-size: 24px;
+  font-weight: v.$font-weight-bold;
+  line-height: 1;
+  color: v.$color-text-primary;
+  margin: 0;
+  text-align: center;
+}
+
+// Figma 36:763 overlay shows title only

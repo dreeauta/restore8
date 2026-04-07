@@ -1,5 +1,7 @@
 # Styling system refactor – summary
 
+> **Deprecated (2026):** The legacy `styles/` tree at the repo root and `styles/styles.scss` have been **removed**. The app now uses **`src/styles/`** only (`index.scss` + partials like `_variables.scss`). See `src/styles/README.md`.
+
 ## Goals
 
 1. **Single typography file** – all heading styles (h1–h6) in one place.

@@ -1,0 +1,252 @@
+// -----------------------------------------------------------------------------
+// Our Process – Figma 36:938 (default filled cards), 36:1284 (minimal, left border only).
+// -----------------------------------------------------------------------------
+
+@use './variables' as v;
+@use './mixins' as m;
+@use './breakpoints' as bp;
+
+.our-process {
+  padding-block: 0;
+  padding-inline: 0;
+  background-color: v.$color-tan;
+}
+
+// Minimal variant – Figma 36-1284: white bg, no card fill, left border only
+.our-process--minimal {
+  background-color: v.$color-bg-surface-1;
+  padding-block: 0;
+  padding-inline: 0;
+}
+
+.our-process__inner {
+  max-width: v.$container-max;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: v.$space-section-inner-y-mobile;
+  padding-inline: 30px;
+  @include m.up(bp.$bp-lg) {
+    padding-block: v.$space-section-inner-y-desktop;
+    padding-inline: v.$space-section-x-figma;
+  }
+}
+
+.our-process--minimal .our-process__inner {
+  align-items: stretch;
+}
+
+.our-process--minimal .our-process__head {
+  text-align: left;
+  margin-bottom: 20px;
+  @include m.up(bp.$bp-lg) {
+    margin-bottom: 0;
+  }
+}
+
+.our-process__head {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.our-process__eyebrow {
+  @include m.type-eyebrow;
+  margin: 0 0 v.$space-2;
+  font-size: 11px;
+  @include m.up(bp.$bp-md) {
+    font-size: v.$font-size-small;
+  }
+}
+
+.our-process--minimal .our-process__eyebrow {
+  font-size: 11px;
+}
+
+.our-process__title {
+  font-family: v.$font-family-heading;
+  font-size: 32px;
+  font-weight: v.$font-weight-bold;
+  line-height: 1.25;
+  color: v.$color-text-primary;
+  margin: 0;
+  @include m.up(bp.$bp-lg) {
+    font-size: v.$font-size-section-title;
+  }
+}
+
+.our-process--minimal .our-process__title {
+  margin-bottom: v.$space-2;
+  font-size: 32px;
+  @include m.up(bp.$bp-lg) {
+    font-size: v.$font-size-section-title;
+  }
+}
+
+.our-process__intro {
+  @include m.type-body-lg;
+  color: v.$color-text-primary;
+  margin: 0 0 0;
+  max-width: none;
+  display: none;
+}
+
+.our-process--minimal .our-process__intro {
+  font-size: 16px;
+  line-height: v.$line-height-body-lg;
+  font-weight: v.$font-weight-body;
+  @include m.up(bp.$bp-md) {
+    font-size: v.$font-size-body-lg;
+  }
+}
+
+.our-process--minimal .our-process__intro {
+  display: block;
+}
+
+.our-process__intro p {
+  margin: 0 0 v.$space-2;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.our-process__grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-6;
+  margin-bottom: v.$space-10;
+  @include m.up(bp.$bp-md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: v.$space-6;
+  }
+  @include m.up(bp.$bp-lg) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+}
+
+.our-process--minimal .our-process__grid {
+  gap: 20px;
+  margin-bottom: 0;
+  @include m.up(bp.$bp-lg) {
+    gap: 30px;
+    padding-top: 50px;
+    margin-bottom: 60px;
+  }
+}
+
+// Mobile stacked variant (Figma 36:965): border/no background cards.
+@media (max-width: #{bp.$bp-md - 1px}) {
+  .our-process__intro {
+    display: block;
+  }
+
+  .our-process__head {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .our-process__grid {
+    gap: 20px;
+    margin-bottom: 0;
+  }
+
+  .our-process__card {
+    background-color: transparent !important;
+    border: none;
+    border-left: 1px solid v.$color-border-default !important;
+    border-radius: 0 !important;
+    min-height: 0 !important;
+    padding: 10px 20px !important;
+    gap: 20px !important;
+  }
+
+  .our-process__card-title {
+    color: v.$color-cta-dark-bg !important;
+  }
+
+  .our-process__card-text {
+    color: v.$color-cta-dark-bg !important;
+  }
+}
+
+.our-process__card {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-5;
+  padding: 50px 30px;
+  border-radius: v.$radius-card;
+  min-height: 250px;
+  @include m.up(bp.$bp-lg) {
+    min-height: 250px;
+  }
+}
+
+// Default: filled colored cards
+.our-process__card--1 { background-color: v.$color-process-1; }
+.our-process__card--2 { background-color: v.$color-process-2; }
+.our-process__card--3 { background-color: v.$color-process-3; }
+.our-process__card--4 { background-color: v.$color-process-4; }
+
+// Minimal: no background, left border only (sage)
+.our-process--minimal .our-process__card {
+  background-color: transparent;
+  border: none;
+  border-left: 1px solid v.$color-border-default;
+  border-radius: 0;
+  min-height: 0;
+  padding: 10px 20px;
+  gap: 20px;
+  @include m.up(bp.$bp-lg) {
+    min-height: 210px;
+    padding: 30px;
+  }
+}
+
+.our-process--minimal .our-process__card--1,
+.our-process--minimal .our-process__card--2,
+.our-process--minimal .our-process__card--3,
+.our-process--minimal .our-process__card--4 {
+  background-color: transparent;
+}
+
+.our-process__card-title {
+  font-family: v.$font-family-heading;
+  font-size: 24px;
+  font-weight: v.$font-weight-bold;
+  line-height: 1.25;
+  color: v.$color-text-inverse;
+  margin: 0;
+}
+
+.our-process--minimal .our-process__card-title { color: v.$color-text-primary; }
+
+.our-process__card-text {
+  @include m.type-body-lg;
+  color: v.$color-text-inverse;
+  margin: 0;
+  font-size: 16px;
+  line-height: v.$line-height-body-lg;
+  font-weight: v.$font-weight-body;
+  @include m.up(bp.$bp-md) {
+    font-size: v.$font-size-body-lg;
+  }
+}
+
+.our-process--minimal .our-process__card-text {
+  color: v.$color-text-primary;
+  font-size: 16px;
+  line-height: v.$line-height-body-lg;
+  font-weight: v.$font-weight-body;
+  @include m.up(bp.$bp-md) {
+    font-size: v.$font-size-body-lg;
+  }
+}
+
+.our-process__cta {
+  align-self: center;
+}

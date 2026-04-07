@@ -1,0 +1,160 @@
+// -----------------------------------------------------------------------------
+// Homepage Hero – Figma node 36:749. Token-only.
+// -----------------------------------------------------------------------------
+
+@use './variables' as v;
+@use './mixins' as m;
+@use './breakpoints' as bp;
+
+$hero-overlay: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
+  linear-gradient(90deg, rgba(66, 63, 63, 0.5) 0%, rgba(66, 63, 63, 0.5) 100%);
+
+.home-hero {
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding-block: 0;
+  padding-inline: 0;
+  background-color: v.$color-neutral-900;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  @include m.up(bp.$bp-lg) {
+    min-height: 700px;
+  }
+}
+
+.home-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.home-hero__bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.home-hero__bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: $hero-overlay;
+}
+
+.home-hero__inner {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 100%;
+  padding-block: v.$space-section-inner-y-mobile;
+  padding-inline: v.$container-padding-mobile;
+  @include m.up(bp.$bp-lg) {
+    align-items: center;
+    padding-block: 200px v.$space-section-inner-y-desktop;
+    padding-inline: v.$space-section-x-figma;
+  }
+}
+
+.home-hero__card {
+  width: 100%;
+  max-width: 914px;
+  margin-inline: 0;
+  padding: v.$space-6;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14);
+  border-radius: v.$radius-2;
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-5;
+  align-items: center;
+  text-align: center;
+  @include m.up(bp.$bp-md) {
+    padding: 50px;
+    border-radius: v.$radius-card;
+    gap: v.$space-5;
+  }
+  @include m.up(bp.$bp-lg) {
+    width: 914px;
+    max-width: 914px;
+  }
+}
+
+.home-hero__eyebrow {
+  @include m.type-eyebrow;
+  margin: 0;
+}
+
+.home-hero__title {
+  font-family: v.$font-family-heading;
+  font-size: 34px;
+  font-weight: v.$font-weight-semibold;
+  line-height: 1.1;
+  letter-spacing: v.$letter-spacing-h1;
+  color: v.$color-cta-dark-bg;
+  margin: 0;
+  width: 100%;
+  @include m.up(bp.$bp-md) {
+    font-size: 56px;
+    line-height: 1.1;
+  }
+  @include m.up(bp.$bp-lg) {
+    font-size: v.$font-size-hero-title;
+    line-height: v.$line-height-hero-title;
+    letter-spacing: v.$letter-spacing-hero-title;
+  }
+}
+
+.home-hero__body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-10;
+  align-items: center;
+  text-align: center;
+}
+
+.home-hero__text {
+  @include m.type-body-lg;
+  color: v.$color-text-primary;
+  margin: 0;
+}
+
+.home-hero__text p {
+  margin: 0 0 v.$space-2;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.home-hero__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: v.$space-3;
+  width: 100%;
+}
+
+// Figma: hero CTA button is larger (18px) and slightly wider padding.
+.home-hero__primary-btn {
+  font-size: 18px;
+  padding-block: v.$space-control-y;
+  padding-inline: 25px;
+}
+
+.home-hero__secondary-link {
+  @include m.type-body;
+  color: v.$color-text-link;
+  transition: color v.$transition-base;
+  &:hover {
+    color: v.$color-text-link-hover;
+  }
+}

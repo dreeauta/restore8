@@ -1,0 +1,24 @@
+// -----------------------------------------------------------------------------
+// Utility classes – token-driven layout and helpers.
+// -----------------------------------------------------------------------------
+
+@use './variables' as v;
+@use './mixins' as m;
+
+.u-container {
+  @include m.container;
+}
+
+.u-stack-2 { display: flex; flex-direction: column; gap: v.$space-2; }
+.u-stack-3 { display: flex; flex-direction: column; gap: v.$space-3; }
+.u-stack-4 { display: flex; flex-direction: column; gap: v.$space-4; }
+.u-stack-6 { display: flex; flex-direction: column; gap: v.$space-6; }
+.u-stack-8 { display: flex; flex-direction: column; gap: v.$space-8; }
+
+.u-visually-hidden {
+  @include m.visually-hidden;
+}
+
+.u-content-max-text {
+  max-width: v.$content-max-text;
+}

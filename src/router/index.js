@@ -1,55 +1,71 @@
 import { createRouter, createWebHistory } from 'vue-router'
+// Home is eagerly imported so the first paint works when the app is hosted under a
+// subpath (e.g. /european-remodeling/ in the portfolio iframe). Lazy chunks can
+// otherwise resolve to /assets/*.js instead of /european-remodeling/assets/*.js.
+import HomeView from '@er/views/HomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    }
+    if (to.hash) {
+      return { el: to.hash, behavior: 'smooth' }
+    }
+    return { top: 0, left: 0 }
+  },
   routes: [
+    // When the iframe (or a direct link) loads …/european-remodeling/index.html,
+    // the path after the base is /index.html, not /. Without this redirect the
+    // home route never matches — only the shell (e.g. NavBar) renders.
+    {
+      path: '/index.html',
+      redirect: '/',
+    },
     {
       path: '/',
       name: 'home',
-      component: () => import('@/views/HomeView.vue'),
-      meta: { title: 'Homepage | Andreea Uta Portfolio' },
+      component: HomeView,
+      meta: { title: 'Restore8 GA - Exterior Home Repair & Basement Finishing' },
     },
     {
       path: '/about',
       name: 'about',
-      component: () => import('@/views/AboutView.vue'),
-      meta: { title: 'About | Andreea Uta Portfolio' },
+      component: () => import('@er/views/AboutView.vue'),
+      meta: { title: 'Restore8 GA - About Us' },
     },
     {
-      path: '/skills',
-      name: 'skills',
-      component: () => import('@/views/LearnView.vue'),
-      meta: { title: 'Skills | Andreea Uta Portfolio' },
+      path: '/homeowners',
+      redirect: '/exterior',
     },
     {
-      path: '/projects',
-      name: 'projects',
-      component: () => import('@/views/PortfolioView.vue'),
-      meta: { title: 'Projects | Andreea Uta Portfolio' },
+      path: '/exterior',
+      name: 'exterior',
+      component: () => import('@er/views/HomeownersView.vue'),
+      meta: { title: 'Restore8 GA - Exterior Repairs' },
     },
     {
-      path: '/design',
+      path: '/investors',
+      redirect: '/basement',
+    },
+    {
+      path: '/basement',
+      name: 'basement',
+      component: () => import('@er/views/InvestorsView.vue'),
+      meta: { title: 'Restore8 GA - Basement Finishing' },
+    },
+    {
+      path: '/requestaquote',
       name: 'design',
-      component: () => import('@/views/DesignView.vue'),
-      meta: { title: 'Design | Andreea Uta Portfolio' },
-    },
-    {
-      path: '/contact',
-      name: 'contact',
-      component: () => import('@/views/ContactView.vue'),
-      meta: { title: 'Contact | Andreea Uta Portfolio' },
-    },
-    {
-      path: '/project/:slug',
-      name: 'project-detail',
-      component: () => import('@/views/ProjectDetailView.vue'),
-      meta: { title: 'Project | Andreea Uta Portfolio' },
+      component: () => import('@er/views/RequestaQuoteView.vue'),
+      meta: { title: 'Restore8 GA - Request a Quote' },
     },
   ],
 })
 
 router.beforeEach((to) => {
-  document.title = to.meta.title || 'Andreea Uta Portfolio'
+  document.title = to.meta.title || 'Restore8 GA'
 })
 
 export default router

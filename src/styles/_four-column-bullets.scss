@@ -1,0 +1,179 @@
+// -----------------------------------------------------------------------------
+// Four-column bullet grid + CTA – Figma node 48:3043 (Rental Property Services).
+// -----------------------------------------------------------------------------
+
+@use './variables' as v;
+@use './mixins' as m;
+@use './breakpoints' as bp;
+
+// Figma: left sage rule, dark green text on cards
+$four-col-border: v.$color-bg-surface-2;
+$four-col-text: v.$color-cta-dark-bg;
+$four-col-head-gap: 10px;
+$four-col-content-pt: 50px;
+$four-col-grid-cta-gap: 60px;
+$four-col-col-gap: 30px;
+$four-col-col-padding: 30px;
+$four-col-col-inner-gap: 20px;
+$four-col-list-indent: 27px;
+
+.four-col-bullets {
+  padding-block: 0;
+  padding-inline: 0;
+  background-color: v.$color-bg-surface-1;
+}
+
+.four-col-bullets__inner {
+  max-width: v.$container-max;
+  margin-inline: auto;
+  padding-block: v.$space-section-inner-y-mobile;
+  padding-inline: v.$container-padding-mobile;
+  @include m.up(bp.$bp-lg) {
+    padding-block-start: v.$space-section-y-figma;
+    padding-block-end: v.$space-section-inner-y-desktop;
+    padding-inline: v.$space-section-x-figma;
+  }
+}
+
+// Figma: title stack left-aligned, gap 10px
+.four-col-bullets__head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $four-col-head-gap;
+  text-align: left;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.four-col-bullets__eyebrow {
+  @include m.type-eyebrow;
+  margin: 0;
+  width: 100%;
+}
+
+.four-col-bullets__title {
+  font-family: v.$font-family-heading;
+  font-size: 32px;
+  font-weight: v.$font-weight-bold;
+  line-height: 1;
+  color: v.$color-text-primary;
+  margin: 0;
+  width: 100%;
+  @include m.up(bp.$bp-lg) {
+    font-size: v.$font-size-section-title;
+  }
+}
+
+.four-col-bullets__intro {
+  @include m.type-body-lg;
+  color: v.$color-text-primary;
+  text-align: left;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-3;
+}
+
+.four-col-bullets__intro p {
+  margin: 0;
+}
+
+// Figma: pt 50px then grid; gap 60px to CTA
+.four-col-bullets__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $four-col-grid-cta-gap;
+  padding-top: $four-col-content-pt;
+}
+
+.four-col-bullets__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-8;
+  width: 100%;
+  align-items: stretch;
+  @include m.up(bp.$bp-md) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: v.$space-6;
+  }
+  @include m.up(bp.$bp-lg) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: $four-col-col-gap;
+    min-height: 210px;
+  }
+}
+
+.four-col-bullets__col {
+  display: flex;
+  flex-direction: column;
+  gap: $four-col-col-inner-gap;
+  align-items: flex-start;
+  border-left: 1px solid $four-col-border;
+  padding: $four-col-col-padding;
+  min-height: 0;
+  @include m.up(bp.$bp-lg) {
+    min-height: 210px;
+    flex: 1 1 0;
+  }
+}
+
+.four-col-bullets__col-title {
+  font-family: v.$font-family-heading;
+  font-size: v.$font-size-card-title;
+  font-weight: v.$font-weight-bold;
+  line-height: 1;
+  color: $four-col-text;
+  margin: 0;
+}
+
+.four-col-bullets__col-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-2;
+}
+
+.four-col-bullets__col-lead {
+  font-family: v.$font-family-body;
+  font-size: v.$font-size-body-lg;
+  font-weight: v.$font-weight-regular;
+  line-height: 1.5;
+  color: $four-col-text;
+  margin: 0;
+}
+
+.four-col-bullets__list {
+  margin: 0;
+  padding-left: $four-col-list-indent;
+  list-style: disc;
+  font-family: v.$font-family-body;
+  font-size: v.$font-size-body-lg;
+  font-weight: v.$font-weight-regular;
+  line-height: 1.5;
+  color: $four-col-text;
+}
+
+.four-col-bullets__list li {
+  margin-bottom: 0;
+  padding-left: v.$space-1;
+  &::marker {
+    color: $four-col-text;
+  }
+}
+
+.four-col-bullets__cta-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.four-col-bullets__cta.app-button {
+  font-size: 18px;
+  padding-block: 12px;
+  padding-inline: 25px;
+  border-radius: v.$radius-2;
+}

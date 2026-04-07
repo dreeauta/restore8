@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// New design system entry – single import for main.js.
+// Order: tokens → globals → typography → utilities.
+// -----------------------------------------------------------------------------
+
+@use './variables';
+@use './mixins';
+@use './globals';
+@use './typography';
+@use './primitives';
+@use './header';
+@use './footer';
+@use './home-hero';
+@use './quote-form';
+@use './text-column';
+@use './two-column-features';
+@use './four-column-bullets';
+@use './three-column';
+@use './teaser-container';
+@use './our-process';
+@use './what-sets-us-apart';
+@use './testimonial-carousel';
+@use './our-services';
+@use './services-accordion';
+@use './image-section';
+@use './contact-cta';
+@use './page-hero';
+@use './utilities';

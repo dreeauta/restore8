@@ -1,12 +1,13 @@
 {
-  "name": "andreeauta-portfolio",
+  "name": "remodeling-site",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build && node scripts/copy-to-dist.mjs",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy:s3": "npm run build && node scripts/sync-s3.mjs"
   },
   "dependencies": {
     "vue": "^3.4.21",

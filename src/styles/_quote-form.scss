@@ -1,0 +1,186 @@
+// -----------------------------------------------------------------------------
+// Request a Quote Form – Figma 36-815. Tan section, top-left radius, two columns.
+// -----------------------------------------------------------------------------
+
+@use './variables' as v;
+@use './mixins' as m;
+@use './breakpoints' as bp;
+
+// Figma 36-815: input height 41px, textarea 300px, label/input gap 3px
+$quote-input-height: 41px;
+$quote-textarea-height: 300px;
+$quote-label-gap: 3px;
+
+.quote-form {
+  margin-top: 0;
+  padding-block: 0;
+  padding-inline: 0;
+  background-color: v.$color-tan;
+  border-top-left-radius: 0;
+  @include m.up(bp.$bp-lg) {
+    border-top-left-radius: v.$radius-quote-form-corner;
+  }
+}
+
+// Request a Quote page form – Figma 36:1045. White background, intro text + stacked fields.
+.quote-form--request-page {
+  background-color: v.$color-bg-surface-1;
+  border-top-left-radius: 0;
+}
+
+.quote-form__inner {
+  max-width: v.$container-max;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-content-gap;
+  align-items: start;
+  padding-block-start: v.$space-section-inner-y-mobile;
+  padding-block-end: 0;
+  padding-inline: v.$container-padding-mobile;
+  @include m.up(bp.$bp-lg) {
+    grid-template-columns: 1fr 1fr;
+    gap: v.$space-content-gap;
+    padding-block-start: 60px;
+    padding-block-end: 60px;
+    padding-inline: v.$space-section-x-figma;
+  }
+}
+
+.quote-form--request-page .quote-form__inner {
+  max-width: 100%;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  padding-block-start: v.$space-section-inner-y-mobile;
+  padding-block-end: 0;
+  padding-inline: 0;
+  @include m.up(bp.$bp-lg) {
+    padding-block-start: v.$space-section-inner-y-desktop;
+    padding-block-end: 0;
+  }
+}
+
+.quote-form__content {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-content-gap;
+  @include m.up(bp.$bp-lg) {
+    padding-inline-end: v.$space-section-x-figma;
+  }
+}
+
+.quote-form--request-page .quote-form__content {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 0 30px;
+  @include m.up(bp.$bp-lg) {
+    padding: 0 v.$space-section-x-figma;
+  }
+}
+
+.quote-form--request-page .quote-form__form {
+  max-width: 1000px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 0 30px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+
+  @include m.up(bp.$bp-lg) {
+    padding: 0 v.$space-section-x-figma;
+  }
+}
+
+.quote-form--request-page .quote-form__title {
+  margin: 0;
+}
+
+.quote-form__title--sr-only {
+  @include m.visually-hidden;
+}
+
+.quote-form__title {
+  font-family: v.$font-family-heading;
+  font-size: 28px;
+  font-weight: v.$font-weight-bold;
+  line-height: 1;
+  color: v.$color-text-primary;
+  margin: 0;
+  @include m.up(bp.$bp-lg) {
+    font-size: v.$font-size-section-title;
+  }
+}
+
+.quote-form__text {
+  @include m.type-body-lg;
+  color: v.$color-text-primary;
+  margin: 0;
+}
+
+.quote-form__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: v.$space-section-inner-y-mobile;
+  @include m.up(bp.$bp-lg) {
+    padding-bottom: v.$space-section-inner-y-desktop;
+  }
+}
+
+// Figma 36-815: inputs – white bg, dark green border, 41px height, 4px radius
+.quote-form .app-input {
+  display: flex;
+  flex-direction: column;
+  gap: $quote-label-gap;
+}
+
+.quote-form .app-input__label {
+  font-size: v.$font-size-body-lg;
+  font-weight: v.$font-weight-regular;
+  margin-bottom: 0;
+}
+
+.quote-form .app-input__field {
+  height: $quote-input-height;
+  min-height: $quote-input-height;
+  background-color: v.$color-bg-surface-1;
+  border-color: v.$color-cta-dark-bg;
+  border-radius: v.$radius-1;
+}
+
+.quote-form .app-input--multiline .app-input__field {
+  height: $quote-textarea-height;
+  min-height: $quote-textarea-height;
+}
+
+.quote-form__submit {
+  align-self: flex-start;
+}
+
+// Request page dropdown overrides – Figma uses the same 41px tall fields.
+.quote-form--request-page .app-select {
+  display: flex;
+  flex-direction: column;
+  gap: $quote-label-gap;
+}
+
+.quote-form--request-page .app-select__label {
+  font-size: v.$font-size-body-lg;
+  font-weight: v.$font-weight-regular;
+  margin-bottom: 0;
+  color: v.$color-text-primary;
+}
+
+.quote-form--request-page .app-select__field {
+  height: $quote-input-height;
+  min-height: $quote-input-height;
+  background-color: v.$color-bg-surface-1;
+  border-color: v.$color-cta-dark-bg;
+  border-radius: v.$radius-1;
+  padding: 9px 7px;
+  padding-right: 32px;
+  background-position: right 7px center;
+}

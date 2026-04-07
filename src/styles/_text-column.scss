@@ -1,0 +1,165 @@
+// -----------------------------------------------------------------------------
+// Text Column – Figma 36:863. Desktop: image left/right. Mobile: image top.
+// -----------------------------------------------------------------------------
+
+@use './variables' as v;
+@use './mixins' as m;
+@use './breakpoints' as bp;
+
+// Figma 36:863
+// - Desktop: pt 100, px 90, gap 90, image 738x440
+// - Mobile: pt 50, px 30, gap 20, image top 350h
+$text-col-head-gap: 10px;
+$text-col-mobile-pt: 40px;
+$text-col-mobile-px: 30px;
+$text-col-mobile-gap: 20px;
+$text-col-mobile-image-height: 350px;
+
+.text-column {
+  padding-block: 0;
+  padding-inline: 0;
+  background-color: v.$color-bg-surface-1;
+}
+
+.text-column--alt {
+  background-color: v.$color-bg-page;
+}
+
+.text-column__inner {
+  max-width: v.$container-max;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: $text-col-mobile-gap;
+  padding-block-start: $text-col-mobile-pt;
+  padding-block-end: v.$space-section-inner-y-mobile;
+  padding-inline: $text-col-mobile-px;
+  @include m.up(bp.$bp-lg) {
+    align-items: center;
+    justify-content: center;
+    gap: v.$space-section-gap;
+    flex-direction: row;
+    padding-block: v.$space-section-inner-y-desktop;
+    padding-inline: v.$space-section-x-figma;
+  }
+}
+
+// Image on right (default): content first, image second in DOM and visually
+.text-column__content {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: $text-col-mobile-gap;
+  justify-content: center;
+  @include m.up(bp.$bp-lg) {
+    max-width: none;
+    gap: v.$space-content-gap;
+  }
+}
+
+.text-column__media-wrap {
+  flex: 0 0 auto;
+  width: 100%;
+  order: -1; // mobile top-image variant in Figma 36:863
+  @include m.up(bp.$bp-lg) {
+    width: 50%;
+    order: 0;
+  }
+}
+
+.text-column__media {
+  width: 100%;
+  height: $text-col-mobile-image-height;
+  border-radius: v.$radius-card;
+  overflow: hidden;
+  background-color: v.$color-bg-surface-2;
+  @include m.up(bp.$bp-lg) {
+    height: v.$height-text-col-image;
+  }
+}
+
+.text-column__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+// Image on left: swap column order so image appears left of text
+.text-column--image-left .text-column__inner {
+  @include m.up(bp.$bp-lg) {
+    flex-direction: row-reverse;
+  }
+}
+
+.text-column__head {
+  display: flex;
+  flex-direction: column;
+  gap: $text-col-head-gap;
+}
+
+.text-column__eyebrow {
+  @include m.type-eyebrow;
+  font-size: 11px;
+  margin: 0;
+  @include m.up(bp.$bp-md) {
+    font-size: v.$font-size-small;
+  }
+}
+
+.text-column__title {
+  font-family: v.$font-family-heading;
+  font-size: 32px;
+  font-weight: v.$font-weight-bold;
+  line-height: 1;
+  color: v.$color-text-primary;
+  margin: 0;
+  @include m.up(bp.$bp-lg) {
+    font-size: v.$font-size-section-title;
+  }
+}
+
+.text-column__body {
+  font-family: v.$font-family-body;
+  font-size: 16px;
+  line-height: v.$line-height-body-lg;
+  font-weight: v.$font-weight-body;
+  color: v.$color-text-primary;
+  @include m.up(bp.$bp-md) {
+    font-size: v.$font-size-body-lg;
+  }
+}
+
+.text-column__body p {
+  margin: 0 0 v.$space-2;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Optional list block (see TextColumnSection listHeading + listItems)
+.text-column__body .text-column__list-heading {
+  margin-top: v.$space-3;
+  margin-bottom: v.$space-2;
+  font-weight: v.$font-weight-semibold;
+}
+
+.text-column__body .text-column__list-heading:last-child {
+  margin-bottom: 0;
+}
+
+.text-column__list {
+  margin: 0 0 v.$space-2;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.text-column__list li {
+  margin-bottom: v.$space-1;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

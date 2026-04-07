@@ -1,0 +1,178 @@
+// -----------------------------------------------------------------------------
+// Site footer – Figma node 36:835. Token-only. BEM: .site-footer
+// -----------------------------------------------------------------------------
+
+@use './variables' as v;
+@use './mixins' as m;
+@use './breakpoints' as bp;
+
+.site-footer {
+  background-color: v.$color-text-link-hover;
+  padding: 60px 30px;
+  font-family: v.$font-family-body;
+  @include m.up(bp.$bp-lg) {
+    padding: 60px v.$space-section-x-figma;
+  }
+}
+
+.site-footer__inner {
+  max-width: 1728px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.site-footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.site-footer__logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+// Keep cream text on hover/focus — global `a:hover` uses $color-text-link-hover, same as footer bg, which hid the SVG (currentColor).
+.site-footer__logo-link {
+  display: block;
+  line-height: 0;
+  color: v.$color-cta-dark-text;
+  text-decoration: none;
+  transition: opacity v.$transition-fast;
+  &:hover {
+    color: v.$color-cta-dark-text;
+    opacity: 1;
+  }
+  &:focus-visible {
+    color: v.$color-cta-dark-text;
+    opacity: 1;
+    @include m.focus-ring;
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+}
+
+.site-footer__tagline {
+  font-family: v.$font-family-body;
+  font-size: v.$font-size-small;
+  line-height: 1.5;
+  color: v.$color-cta-dark-text;
+  margin: 0;
+  max-width: 260px;
+}
+
+.site-footer__logo {
+  display: block;
+}
+
+.site-footer__logo--home {
+  width: auto;
+  height: 56px;
+  flex-shrink: 0;
+}
+
+.site-footer__copy {
+  font-family: v.$font-family-body;
+  font-size: v.$font-size-body-lg;
+  font-weight: v.$font-weight-bold;
+  color: v.$color-cta-dark-text;
+  margin: 0;
+  order: 3;
+}
+
+.site-footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.site-footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 120px;
+}
+
+.site-footer__heading-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.site-footer__heading {
+  font-family: v.$font-family-body;
+  font-size: v.$font-size-small;
+  font-weight: v.$font-weight-extrabold;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: v.$color-cta-dark-text;
+  margin: 0;
+}
+
+.site-footer__heading-line {
+  width: 151px;
+  height: 1px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.site-footer__col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-2;
+}
+
+.site-footer__col a {
+  font-family: v.$font-family-body;
+  font-size: v.$font-size-body-lg;
+  font-weight: v.$font-weight-regular;
+  color: v.$color-cta-dark-text;
+  text-decoration: none;
+  transition: opacity v.$transition-fast;
+  &:hover,
+  &:focus-visible {
+    color: v.$color-cta-dark-text;
+    opacity: 0.9;
+  }
+}
+
+@include m.up(bp.$bp-lg) {
+  .site-footer__inner {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    column-gap: 200px;
+    row-gap: 30px;
+    align-items: start;
+  }
+
+  .site-footer__brand {
+    grid-column: 1;
+  }
+
+  .site-footer__nav {
+    grid-column: 2;
+    flex-direction: row;
+    gap: 60px;
+  }
+
+  .site-footer__copy {
+    grid-column: 1;
+    order: 0;
+  }
+}

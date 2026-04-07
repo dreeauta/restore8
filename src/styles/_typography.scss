@@ -1,0 +1,66 @@
+// -----------------------------------------------------------------------------
+// Global typography – applies token-based type to base elements.
+// -----------------------------------------------------------------------------
+
+@use './variables' as v;
+@use './mixins' as m;
+
+body {
+  @include m.type-body;
+  color: v.$color-text-primary;
+  background-color: v.$color-bg-page;
+}
+
+h1 {
+  @include m.type-heading(h1);
+  color: v.$color-text-primary;
+  margin: 0 0 v.$space-3;
+}
+
+h2 {
+  @include m.type-heading(h2);
+  color: v.$color-text-primary;
+  margin: 0 0 v.$space-3;
+}
+
+h3 {
+  @include m.type-heading(h3);
+  color: v.$color-text-primary;
+  margin: 0 0 v.$space-2;
+}
+
+h4 {
+  @include m.type-heading(h4);
+  color: v.$color-text-primary;
+  margin: 0 0 v.$space-2;
+}
+
+h5 {
+  @include m.type-heading(h5);
+  color: v.$color-text-primary;
+  margin: 0 0 v.$space-2;
+}
+
+h6 {
+  @include m.type-heading(h6);
+  color: v.$color-text-primary;
+  margin: 0 0 v.$space-2;
+}
+
+p {
+  @include m.type-body;
+  margin: 0 0 v.$space-4;
+  color: v.$color-text-primary;
+}
+
+a {
+  color: v.$color-text-link;
+  text-decoration: none;
+  transition: color v.$transition-base;
+  &:hover {
+    color: v.$color-text-link-hover;
+  }
+  &:focus-visible {
+    @include m.focus-ring;
+  }
+}

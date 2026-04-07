@@ -1,0 +1,102 @@
+// -----------------------------------------------------------------------------
+// Mixins – use tokens only. No raw values.
+// -----------------------------------------------------------------------------
+
+@use './variables' as v;
+@use './breakpoints' as bp;
+
+@mixin up($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin container {
+  width: 100%;
+  max-width: v.$container-max;
+  margin-inline: auto;
+  padding-inline: v.$container-padding-mobile;
+  @include up(bp.$bp-lg) {
+    padding-inline: v.$container-padding-desktop;
+  }
+}
+
+@mixin type-heading($level) {
+  font-family: v.$font-family-heading;
+  font-weight: v.$font-weight-bold;
+  line-height: v.$line-height-h2;
+  letter-spacing: v.$letter-spacing-default;
+  @if $level == h1 {
+    font-size: v.$font-size-h1;
+    line-height: v.$line-height-h1;
+    font-weight: v.$font-weight-h1;
+    letter-spacing: v.$letter-spacing-h1;
+  } @else if $level == h2 {
+    font-size: v.$font-size-h2;
+    line-height: v.$line-height-h2;
+    font-weight: v.$font-weight-h2;
+  } @else if $level == h3 {
+    font-size: v.$font-size-h3;
+    line-height: v.$line-height-h3;
+    font-weight: v.$font-weight-h3;
+  } @else if $level == h4 {
+    font-size: v.$font-size-h4;
+    line-height: v.$line-height-h4;
+    font-weight: v.$font-weight-h4;
+  } @else if $level == h5 {
+    font-size: v.$font-size-h5;
+    line-height: v.$line-height-h5;
+    font-weight: v.$font-weight-h5;
+  } @else if $level == h6 {
+    font-size: v.$font-size-h6;
+    line-height: v.$line-height-h6;
+    font-weight: v.$font-weight-h6;
+  }
+}
+
+@mixin type-body {
+  font-family: v.$font-family-body;
+  font-size: v.$font-size-body;
+  line-height: v.$line-height-body;
+  font-weight: v.$font-weight-body;
+  letter-spacing: v.$letter-spacing-default;
+}
+
+// Figma: section body copy (18px)
+@mixin type-body-lg {
+  font-family: v.$font-family-body;
+  font-size: v.$font-size-body;
+  line-height: v.$line-height-body-lg;
+  font-weight: v.$font-weight-body;
+  @include up(bp.$bp-md) {
+    font-size: v.$font-size-body-lg;
+  }
+}
+
+// Figma: eyebrow label (13px, extrabold, uppercase, dark teal)
+@mixin type-eyebrow {
+  font-family: v.$font-family-body;
+  font-size: v.$font-size-small;
+  font-weight: v.$font-weight-extrabold;
+  line-height: 1.25;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: v.$color-text-link;
+}
+
+@mixin focus-ring {
+  outline: 2px solid v.$color-border-focus;
+  outline-offset: 2px;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

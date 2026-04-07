@@ -1,0 +1,45 @@
+// -----------------------------------------------------------------------------
+// Image section – Figma node 52:3455. Full-width image block, token-only.
+// -----------------------------------------------------------------------------
+
+@use './variables' as v;
+@use './mixins' as m;
+@use './breakpoints' as bp;
+
+.image-section {
+  padding-block: 0;
+  padding-inline: 0;
+  background-color: v.$color-bg-surface-1;
+}
+
+.image-section__inner {
+  max-width: v.$container-max;
+  margin-inline: auto;
+  padding-block: v.$space-section-inner-y-mobile;
+  padding-inline: v.$container-padding-mobile;
+  @include m.up(bp.$bp-lg) {
+    padding-block: v.$space-section-inner-y-desktop;
+    padding-inline: v.$space-section-x-figma;
+  }
+}
+
+.image-section__media {
+  width: 100%;
+  height: 320px;
+  border-radius: v.$radius-card;
+  overflow: hidden;
+  background-color: v.$color-bg-surface-2;
+  @include m.up(bp.$bp-md) {
+    height: 480px;
+  }
+  @include m.up(bp.$bp-lg) {
+    height: 676px;
+  }
+}
+
+.image-section__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

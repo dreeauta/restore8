@@ -1,82 +1,58 @@
 <template>
-  <header class="page-hero">
-    <div class="page-hero-bg" aria-hidden="true"></div>
-    <div class="page-hero-inner">
-      <h1 class="page-hero-title">{{ title }}</h1>
-      <p v-if="subtitle" class="page-hero-subtitle">{{ subtitle }}</p>
-      <div class="page-hero-accent"></div>
+  <header
+    class="page-hero"
+    :class="`page-hero--${theme}`"
+    :aria-labelledby="titleId"
+  >
+    <div v-if="imageSrc" class="page-hero__media">
+      <img :src="imageSrc" :alt="imageAlt" />
+    </div>
+    <div class="page-hero__content">
+      <h1 :id="titleId" class="page-hero__title">{{ title }}</h1>
+      <div class="page-hero__body">
+        <div v-if="$slots.body" class="page-hero__text">
+          <slot name="body" />
+        </div>
+        <div v-else-if="paragraphs?.length" class="page-hero__text">
+          <p v-for="(p, i) in paragraphs" :key="i">{{ p }}</p>
+        </div>
+        <p v-else-if="subtitle" class="page-hero__text">{{ subtitle }}</p>
+        <AppButton
+          v-if="ctaLabel"
+          :to="ctaTo"
+          :href="ctaHref"
+          :variant="ctaVariant"
+          class="page-hero__cta"
+        >
+          {{ ctaLabel }}
+        </AppButton>
+      </div>
     </div>
   </header>
 </template>
 
 <script setup>
-defineProps({
+import { computed } from 'vue'
+import AppButton from '@er/components/AppButton.vue'
+
+const props = defineProps({
+  /** 'light' = tan bg, dark green title/text, dark CTA. 'dark' = dark teal bg, white text, secondary CTA. */
+  theme: {
+    type: String,
+    default: 'dark',
+    validator: (v) => v === 'light' || v === 'dark',
+  },
   title: { type: String, required: true },
   subtitle: { type: String, default: '' },
+  paragraphs: { type: Array, default: () => [] },
+  ctaLabel: { type: String, default: 'Request a Quote' },
+  ctaTo: { type: String, default: '/requestaquote' },
+  ctaHref: { type: String, default: '' },
+  imageSrc: { type: String, default: '' },
+  imageAlt: { type: String, default: '' },
 })
+
+const titleId = computed(() => `page-hero-${Math.random().toString(36).slice(2, 9)}`)
+
+const ctaVariant = computed(() => (props.theme === 'light' ? 'dark' : 'secondary'))
 </script>
-
-<style lang="scss" scoped>
-@use '../../styles/scss/global/variables' as *;
-
-.page-hero {
-  position: relative;
-  min-height: 280px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: $space-4xl 1.5rem;
-  overflow: hidden;
-}
-
-.page-hero-bg {
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(to right top, #77599c, #5e5b98, #4a619a, #34669a, #1e6a96, #007598, #007f97);
-}
-
-.page-hero-bg::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 80% 50% at 50% 0%, $white-subtle 0%, transparent 60%);
-  pointer-events: none;
-}
-
-.page-hero-inner {
-  position: relative;
-  max-width: 640px;
-  text-align: center;
-  z-index: 1;
-}
-
-.page-hero-title {
-  color: $white-pure;
-  margin: 0 0 0.75rem;
-}
-
-.page-hero-subtitle {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.05rem;
-  color: $white-muted;
-  margin: 0;
-  line-height: 1.6;
-  max-width: 480px;
-  margin-inline: auto;
-}
-
-.page-hero-accent {
-  width: 48px;
-  height: 3px;
-  background: $white-pure;
-  margin: $space-lg auto 0;
-  border-radius: 2px;
-}
-
-@media (min-width: 768px) {
-  .page-hero {
-    min-height: 320px;
-    padding: 5rem 2rem;
-  }
-}
-</style>

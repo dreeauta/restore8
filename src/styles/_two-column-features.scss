@@ -1,0 +1,114 @@
+// -----------------------------------------------------------------------------
+// Two-column feature cards – Homeowners “How we can help” (mockup).
+// -----------------------------------------------------------------------------
+
+@use './variables' as v;
+@use './mixins' as m;
+@use './breakpoints' as bp;
+
+.two-col-features {
+  padding-block: 0;
+  padding-inline: 0;
+  background-color: v.$color-bg-surface-1;
+}
+
+.two-col-features__inner {
+  max-width: v.$container-max;
+  margin-inline: auto;
+  padding-block: v.$space-section-inner-y-mobile;
+  padding-inline: v.$container-padding-mobile;
+  @include m.up(bp.$bp-lg) {
+    padding-block: v.$space-section-inner-y-desktop;
+    padding-inline: v.$space-section-x-figma;
+  }
+}
+
+.two-col-features__title {
+  font-family: v.$font-family-heading;
+  font-size: 32px;
+  font-weight: v.$font-weight-bold;
+  line-height: 1;
+  color: v.$color-text-primary;
+  text-align: center;
+  margin: 0 0 v.$space-block;
+  @include m.up(bp.$bp-lg) {
+    font-size: v.$font-size-section-title;
+    margin-bottom: v.$space-block;
+  }
+}
+
+.two-col-features__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-10;
+  @include m.up(bp.$bp-lg) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: v.$space-column-gap;
+    align-items: stretch;
+  }
+}
+
+.two-col-features__card {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-5;
+  height: 100%;
+}
+
+.two-col-features__media {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  max-height: 320px;
+  border-radius: v.$radius-card;
+  overflow: hidden;
+  background-color: v.$color-bg-surface-2;
+  @include m.up(bp.$bp-lg) {
+    max-height: 360px;
+  }
+}
+
+.two-col-features__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.two-col-features__body {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-3;
+  flex: 1;
+}
+
+.two-col-features__card-title {
+  font-family: v.$font-family-heading;
+  font-size: 24px;
+  font-weight: v.$font-weight-bold;
+  line-height: 1.2;
+  color: v.$color-text-primary;
+  margin: 0;
+  @include m.up(bp.$bp-lg) {
+    font-size: v.$font-size-card-title;
+  }
+}
+
+.two-col-features__desc {
+  @include m.type-body-lg;
+  color: v.$color-text-primary;
+  margin: 0;
+}
+
+.two-col-features__list {
+  margin: 0;
+  padding-left: 1.25rem;
+  @include m.type-body-lg;
+  color: v.$color-text-primary;
+}
+
+.two-col-features__list li {
+  margin-bottom: v.$space-2;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,48 @@
+// -----------------------------------------------------------------------------
+// Contact CTA section – token-only. BEM: .contact-cta
+// -----------------------------------------------------------------------------
+
+@use './variables' as v;
+@use './mixins' as m;
+@use './breakpoints' as bp;
+
+.contact-cta {
+  padding-block: 0;
+  padding-inline: 0;
+  background-color: v.$color-bg-surface-1;
+}
+
+.contact-cta__inner {
+  max-width: v.$container-max;
+  margin-inline: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: v.$space-5;
+  padding-block: v.$space-section-inner-y-mobile;
+  padding-inline: v.$container-padding-mobile;
+  @include m.up(bp.$bp-lg) {
+    padding-block: v.$space-section-inner-y-desktop;
+    padding-inline: v.$space-section-x-figma;
+  }
+}
+
+.contact-cta__title {
+  font-family: v.$font-family-heading;
+  font-size: 28px;
+  font-weight: v.$font-weight-bold;
+  line-height: v.$line-height-section-title;
+  color: v.$color-text-primary;
+  margin: 0;
+  @include m.up(bp.$bp-lg) {
+    font-size: v.$font-size-section-title;
+  }
+}
+
+.contact-cta__text {
+  @include m.type-body-lg;
+  color: v.$color-text-primary;
+  margin: 0;
+  max-width: v.$content-max-text;
+}
