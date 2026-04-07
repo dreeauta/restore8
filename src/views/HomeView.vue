@@ -72,7 +72,7 @@ const testimonialItems = [
   },
   {
     quote: copy.testimonials[1].quote,
-    image: '/img/remodeling-images/basement-2.jpg',
+    image: '/img/remodeling-images/basement-2.webp',
     imageAlt: 'Basement staircase renovation',
   },
 ]
@@ -92,7 +92,7 @@ const whatWeOfferItems = [
   },
   {
     ...copy.whatWeOffer.items[2],
-    image: '/img/remodeling-images/basement-3.jpg',
+    image: '/img/remodeling-images/basement-3.webp',
     imageAlt: 'Basement finishing services',
     ctaTo: to(copy.whatWeOffer.items[2].ctaTo),
   },
@@ -101,13 +101,13 @@ const whatWeOfferItems = [
 const teaserContainerItems = [
   {
     ...copy.teasers.items[0],
-    image: '/img/remodeling-images/exterior-6.jpg',
+    image: '/img/remodeling-images/exterior-6.webp',
     imageAlt: 'Exterior home repair services',
     ctaTo: to(copy.teasers.items[0].ctaTo),
   },
   {
     ...copy.teasers.items[1],
-    image: '/img/remodeling-images/basement-5.jpg',
+    image: '/img/remodeling-images/basement-5.webp',
     imageAlt: 'Basement finishing services',
     ctaTo: to(copy.teasers.items[1].ctaTo),
   },

@@ -5,7 +5,7 @@
       :subtitle="copy.hero.subtitle"
       :cta-label="copy.hero.ctaLabel"
       cta-to="#contact"
-      image-src="/img/remodeling-images/exterior-7.jpg"
+      image-src="/img/remodeling-images/exterior-7.webp"
       image-alt="Request a repair estimate"
     />
     <QuoteFormSection

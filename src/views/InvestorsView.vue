@@ -7,7 +7,7 @@
       :cta-label="copy.hero.ctaLabel"
       cta-to=""
       cta-href="#contact"
-      image-src="/img/remodeling-images/basement-5.jpg"
+      image-src="/img/remodeling-images/basement-5.webp"
       image-alt="Basement finishing project"
     />
 
@@ -16,7 +16,7 @@
       :eyebrow="copy.intro.eyebrow"
       :title="copy.intro.title"
       :paragraphs="copy.intro.paragraphs"
-      image-src="/img/remodeling-images/basement-1.jpg"
+      image-src="/img/remodeling-images/basement-1.webp"
       image-alt="Finished basement renovation"
       image-position="right"
     />
@@ -82,7 +82,7 @@ const rentalColumns = copy.services.columns
 const testimonialItems = [
   {
     quote: copy.testimonials[0].quote,
-    image: '/img/remodeling-images/basement-4.jpg',
+    image: '/img/remodeling-images/basement-4.webp',
     imageAlt: 'Property exterior repair',
   },
 ]
@@ -90,12 +90,12 @@ const testimonialItems = [
 const whyInvestorsItems = [
   {
     ...copy.features.items[0],
-    image: '/img/remodeling-images/basement-2.jpg',
+    image: '/img/remodeling-images/basement-2.webp',
     imageAlt: 'Basement contractor work',
   },
   {
     ...copy.features.items[1],
-    image: '/img/remodeling-images/basement-5.jpg',
+    image: '/img/remodeling-images/basement-5.webp',
     imageAlt: 'Basement staircase and build-out',
   },
 ]

@@ -14,14 +14,14 @@
       :eyebrow="copy.whoWeAre.eyebrow"
       :title="copy.whoWeAre.title"
       :paragraphs="copy.whoWeAre.paragraphs"
-      image-src="/img/remodeling-images/basement-3.jpg"
+      image-src="/img/remodeling-images/basement-3.webp"
       image-alt="Finished basement living area"
       image-position="right"
     />
 
     <ImageSection
       id="about-kitchen-banner"
-      src="/img/remodeling-images/exterior-5.webp"
+      src="/img/remodeling-images/exterior-2.webp"
       image-alt="Exterior home repair and replacement work"
     />
 
@@ -86,12 +86,12 @@ const whatSetsUsApartItems = [
   },
   {
     ...copy.whatSetsUsApart.items[1],
-    image: '/img/remodeling-images/basement-4.jpg',
+    image: '/img/remodeling-images/basement-4.webp',
     imageAlt: 'Exterior contractor craftsmanship',
   },
   {
     ...copy.whatSetsUsApart.items[2],
-    image: '/img/remodeling-images/basement-5.jpg',
+    image: '/img/remodeling-images/basement-5.webp',
     imageAlt: 'Finished basement transformation',
   },
 ]

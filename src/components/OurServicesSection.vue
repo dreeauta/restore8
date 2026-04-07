@@ -22,7 +22,7 @@
         <article class="our-services__card">
           <div class="our-services__card-media">
             <img
-              src="/img/remodeling-images/basement-1.jpg"
+              src="/img/remodeling-images/basement-1.webp"
               alt="Contemporary bathroom"
               loading="lazy"
             />
@@ -32,7 +32,7 @@
         <article class="our-services__card">
           <div class="our-services__card-media">
             <img
-              src="/img/remodeling-images/exterior-7.jpg"
+              src="/img/remodeling-images/exterior-7.webp"
               alt="Design updates"
               loading="lazy"
             />
