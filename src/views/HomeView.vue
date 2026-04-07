@@ -72,7 +72,7 @@ const testimonialItems = [
   },
   {
     quote: copy.testimonials[1].quote,
-    image: '/img/remodeling-images/basement-2jpg.jpg',
+    image: '/img/remodeling-images/basement-2.jpg',
     imageAlt: 'Basement staircase renovation',
   },
 ]

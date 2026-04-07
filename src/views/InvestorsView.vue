@@ -90,7 +90,7 @@ const testimonialItems = [
 const whyInvestorsItems = [
   {
     ...copy.features.items[0],
-    image: '/img/remodeling-images/basement-2jpg.jpg',
+    image: '/img/remodeling-images/basement-2.jpg',
     imageAlt: 'Basement contractor work',
   },
   {
