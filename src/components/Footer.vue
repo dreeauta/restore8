@@ -13,6 +13,9 @@
           <p class="site-footer__tagline">
             Exterior Repair &amp; Basement Finishing
           </p>
+          <a class="site-footer__contact-link" href="tel:+14049666439">
+            404-966-6439
+          </a>
         </div>
       </div>
       <nav class="site-footer__nav" aria-label="Footer navigation">
@@ -38,17 +41,6 @@
           <ul>
             <li><RouterLink :to="to('/about')">About Us</RouterLink></li>
             <li><RouterLink :to="to('/requestaquote')">Request a Quote</RouterLink></li>
-          </ul>
-        </div>
-        <div class="site-footer__col">
-          <div class="site-footer__heading-wrap">
-            <h4 class="site-footer__heading">Our Work</h4>
-            <div class="site-footer__heading-line" aria-hidden="true">
-              <img :src="imgLine1" alt="" />
-            </div>
-          </div>
-          <ul>
-            <li><RouterLink :to="to('/')">Gallery</RouterLink></li>
           </ul>
         </div>
       </nav>

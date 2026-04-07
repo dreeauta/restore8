@@ -24,6 +24,16 @@
         method="POST"
         @submit="onSubmit"
       >
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Restore8 website form submission"
+        >
+        <input
+          type="hidden"
+          name="_template"
+          value="table"
+        >
         <AppInput
           v-model="form.name"
           name="name"
@@ -132,7 +142,7 @@ defineProps({
     default: 'tan',
     validator: (v) => v === 'tan' || v === 'request-page',
   },
-  formAction: { type: String, default: 'https://formspree.io/f/xjvnpqyz' },
+  formAction: { type: String, default: 'https://formsubmit.co/utaflo72@gmail.com' },
   submitLabel: { type: String, default: 'Submit' },
   /** Label for the message textarea (tan / default variant). */
   messageLabel: { type: String, default: 'Tell Me About Your Project' },

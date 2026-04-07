@@ -16,7 +16,7 @@
         </nav>
         <div class="site-header__actions">
           <RouterLink :to="to('/requestaquote')" class="site-header__btn site-header__btn--primary">Request a Quote</RouterLink>
-          <a href="tel:+15551234567" class="site-header__btn site-header__btn--ghost">Call Us</a>
+          <a href="tel:+14049666439" class="site-header__btn site-header__btn--ghost">404-966-6439</a>
         </div>
         <button
           type="button"
@@ -38,7 +38,7 @@
           <RouterLink :to="to('/basement')" class="site-header__link" @click="menuOpen = false">Basement</RouterLink>
           <RouterLink :to="to('/about')" class="site-header__link" @click="menuOpen = false">About</RouterLink>
           <RouterLink :to="to('/requestaquote')" class="site-header__btn site-header__btn--primary" @click="menuOpen = false">Request a Quote</RouterLink>
-          <a href="tel:+15551234567" class="site-header__btn site-header__btn--ghost" @click="menuOpen = false">Call Us</a>
+          <a href="tel:+14049666439" class="site-header__btn site-header__btn--ghost" @click="menuOpen = false">404-966-6439</a>
         </nav>
       </div>
     </Transition>
